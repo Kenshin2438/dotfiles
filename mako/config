@@ -1,25 +1,30 @@
 sort=-time
 layer=overlay
-background-color=#2d2a2e66
+
+# BINDING OPTIONS
+on-button-left=dismiss
+on-button-middle=none
+on-button-right=dismiss-all
+on-touch=dismiss
+
 width=450
 height=150
-border-size=1
-border-color=#cceeff
-border-radius=12
+
 icons=1
 max-icon-size=64
 default-timeout=5000
 ignore-timeout=0
-font="Noto Sans CJK SC" 14
-margin=12
-padding=12,20
+font="FiraCode Nerd Font" 14
 
-[urgency=low]
-border-color=#cccccc
+border-size=2
+border-radius=5
+margin=10
 
-[urgency=normal]
-border-color=#cceeff
+# Macchiato https://github.com/catppuccin/mako/blob/main/src/macchiato
+background-color=#24273a
+text-color=#cad3f5
+border-color=#8aadf4
+progress-color=over #363a4f
 
-[urgency=critical]
-border-color=#ff7777
-default-timeout=0
+[urgency=high]
+border-color=#f5a97f
