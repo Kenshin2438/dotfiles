@@ -51,7 +51,8 @@ tooltip {
 #memory,
 #pulseaudio,
 #backlight,
-#battery {
+#battery,
+#custom-notification {
     padding: 1px 5px;
 }
 
