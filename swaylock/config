@@ -17,7 +17,7 @@ grace-no-touch
 datestr=%a, %B %e
 timestr=%I:%M %p
 
-font="Lucida Grande"
+font=FiraCode Nerd Font
 color=282a36
 inside-color=1F202A
 line-color=1F202A
