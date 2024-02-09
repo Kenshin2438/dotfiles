@@ -16,4 +16,4 @@ Thanks:
 - [rose-pine/swaync: Soho vibes for SwayNotificationCenter](https://github.com/rose-pine/swaync) swaync
 - [dracula/swaylock: 🧛Dark theme for Swaylock ](https://github.com/dracula/swaylock) swaylock
 - [davidmathers/tokyo-night-kitty-theme](https://github.com/davidmathers/tokyo-night-kitty-theme) kitty
-
+- [用 fontconfig 治理 Linux 中的字体 - 双猫CC](https://catcat.cc/post/2021-03-07/) fontconfig
