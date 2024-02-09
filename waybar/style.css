@@ -85,6 +85,10 @@ tooltip {
     color: #a6e3a1;
 }
 
+#custom-notification {
+    color: #6b53ca
+}
+
 .modules-left {
     padding-left: 5px;
 }
