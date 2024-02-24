@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "FiraCode Nerd Font";
+    font-family: "FiraCode Nerd Font", monospace;
     font-weight: bold;
     font-size: 16px;
     min-height: 0;
@@ -57,6 +57,7 @@ tooltip {
 }
 
 #window {
+    font-family: "LXGW WenKai", "Symbols Nerd Font", monospace;
     margin-right: 40px;
     margin-right: 40px;
 }

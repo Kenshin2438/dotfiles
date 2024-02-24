@@ -1,0 +1,38 @@
+add_newline = false
+
+format = """
+$username$hostname $directory \
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$cmd_duration
+$character"""
+
+[character]
+success_symbol = "[• ](bold fg:blue)"
+error_symbol = "[• 󰅙](bold fg:red)"
+
+[package]
+disabled = true
+
+[username]
+style_user = "bold bg:cyan fg:black"
+style_root = "red bold"
+format = "[](bold fg:cyan)[$user]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[@$hostname](bg:cyan bold fg:black)[](bold fg:cyan)'
+trim_at = '.companyname.com'
+disabled = false
+
+[directory]
+read_only = "  "
+style = "bg:blue fg:black"
+truncation_length = 6
+truncation_symbol = "••/"
+format = '[](bold fg:blue)[$path]($style)[](bold fg:blue)'

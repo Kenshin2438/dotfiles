@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "margin": "5px 5px 0px 5px",
+  "margin": "4px 4px 0px 4px",
   "mod": "dock",
   "exclusive": true,
   "passthrough": false,
@@ -71,7 +71,7 @@
     "spacing": 10
   },
   "clock": {
-    "format": "{: %R 󰃭 %m-%d}",
+    "format": "{: %R  %m-%d}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "format": {

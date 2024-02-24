@@ -1,6 +1,7 @@
 import = [
   "~/.config/alacritty/catppuccin_macchiato.toml"
 ]
+live_config_reload = true
 
 [env]
 TERM = "xterm-256color"
@@ -9,27 +10,26 @@ TERM = "xterm-256color"
 size = 12.0
 
 [font.bold]
-family = "FiraCode Nerd Font Mono"
+family = "FiraCode Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "FiraCode Nerd Font Mono"
+family = "FiraCode Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "FiraCode Nerd Font Mono"
+family = "FiraCode Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "FiraCode Nerd Font Mono"
+family = "FiraCode Nerd Font"
 style = "Regular"
 
 [window]
+padding = { x = 3, y = 3 }
+dynamic_padding = true
 opacity = 0.9
-
-[window.padding]
-x = 5
-y = 5
+decorations = "Full"
 
 [keyboard]
 bindings = [
