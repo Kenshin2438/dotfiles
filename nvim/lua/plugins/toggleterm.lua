@@ -1,7 +1,6 @@
--- https://github.com/LazyVim/LazyVim/discussions/193
 return {
   "akinsho/toggleterm.nvim",
-  config = true,
+  event = "VeryLazy",
   cmd = "ToggleTerm",
   keys = {
     { "<F4>", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" },
