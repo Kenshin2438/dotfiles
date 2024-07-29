@@ -1,19 +1,51 @@
-My personal dotfiles for ArchLinux (Hyprland).
+My `dotfiles` for [Arch]Linux (Hyprland).
+
+**_Important: use at your own risk. Test with dummy files before use it with your real dotfiles._**
 
 ---
 
-![screenshot 2024-02-09](./20240209-Screenshot.png)
+## TODO
 
----
+- [ ] Replace `waybar` with `ags` [Aylur's GTK Shell](https://aylur.github.io/ags-docs)
 
-Thanks:
+## Installation
 
-- [Hyprland Wiki](https://wiki.hyprland.org/) almost everything for hyprland :)
-- [LazyVim](https://www.lazyvim.org/) nvim
-- [sgj123456/dotfiles](https://github.com/sgj123456/dotfiles) waybar(modified)
-- [Wayland - 平铺窗口管理器 - Hyprland 折腾记](https://zhuanlan.zhihu.com/p/646864577) xwayland
-- [Hyprland 环境配置与美化 // Isoheptane](https://cascade.moe/posts/hyprland-configure) tofi
-- [rose-pine/swaync: Soho vibes for SwayNotificationCenter](https://github.com/rose-pine/swaync) swaync
-- [dracula/swaylock: 🧛Dark theme for Swaylock ](https://github.com/dracula/swaylock) swaylock
-- [davidmathers/tokyo-night-kitty-theme](https://github.com/davidmathers/tokyo-night-kitty-theme) kitty
-- [用 fontconfig 治理 Linux 中的字体 - 双猫CC](https://catcat.cc/post/2021-03-07/) fontconfig
+### Dependency
+
+[Reddit r/hyprland | What applications do you use for basic stuff? ](https://www.reddit.com/r/hyprland/comments/1bl735k/what_applications_do_you_use_for_basic_stuff/)
+
+- Terminal: `alacritty`
+- Shell: `fish`
+- Window Manager: `hyprland`
+  - Hypr Ecosystem(hypr\* projects): `hyprlock`, `hypridle`
+- Theme:
+  - GTK(3): `orchis-theme`
+  - Icon: `adwaita-icon-theme`
+  - Cursor: `bibata-cursor-theme`
+  - Shell Prompt: `starship`
+- Fonts:
+  - basics(`noto-fonts-*`)
+  - ZH-CN: `ttf-lxgw-wenkai`, `adobe-source-code-pro-fonts`
+  - Nerd-Font: `ttf-firacode-nerd`, `otf-comicshanns-nerd`
+- File Explorer: `nautilus [gnome]`
+- Image Viewer: `loupe [gnome]`
+- Music Player: `spotify-launcher`, `netease-cloud-music-gtk4`
+- Editor: `neovim`, `code`, `obsidian`
+
+### Enabling Configurations
+
+**Create symbolic links** and **resolve conflicts** _manually_.
+
+```shell
+ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
+...
+```
+
+### Misc. Login Prompt
+
+- https://wiki.archlinux.org/title/ASCII_art
+- https://wiki.archlinux.org/title/Arch_boot_process#Login
+
+```shell
+sudo cp ~/dotfiles/login/issue /etc/issue
+```
