@@ -1,6 +1,4 @@
-import = [
-  "~/.config/alacritty/catppuccin_macchiato.toml"
-]
+import = ["~/.config/alacritty/catppuccin_macchiato.toml"]
 live_config_reload = true
 
 [env]
@@ -32,6 +30,4 @@ opacity = 0.9
 decorations = "Full"
 
 [keyboard]
-bindings = [
-  { key = "F11", action = "ToggleFullscreen" }
-]
+bindings = [{ key = "F11", action = "ToggleFullscreen" }]
