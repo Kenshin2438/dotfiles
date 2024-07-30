@@ -171,7 +171,7 @@
 	height = 480
 
 	# Window background color
-	background-color = #1B1D1EBF
+	background-color = #1B1D1E
 
 	# Width of the border outlines in pixels.
 	outline-width = 0
@@ -183,16 +183,16 @@
 	border-width = 3
 
 	# Border color
-	border-color = #cceeff
+	border-color = #CCEEFF
 
 	# Radius of window corners in pixels.
 	corner-radius = 24
 
 	# Padding between borders and text. Can be pixels or a percentage.
-	padding-top = 6
-	padding-bottom = 6
-	padding-left = 12
-	padding-right = 12
+	padding-top = 8
+	padding-bottom = 8
+	padding-left = 8
+	padding-right = 8
 
 	# Whether to clip text drawing to be within the specified padding. This
 	# is mostly important for allowing text to be inset from the border,
@@ -239,7 +239,7 @@
 	hide-cursor = false
 
 	# Show a text cursor in the input field.
-	text-cursor = true
+	text-cursor = false
 
 	# Sort results by number of usages in run and drun modes.
 	history = true
@@ -256,6 +256,7 @@
 	# algorithm.
 	#
 	# Supported values: normal, prefix, fuzzy
+	matching-algorithm = normal
 
 	# If true, require a match to allow a selection to be made. If false,
 	# making a selection with no matches will print input to stdout.
@@ -274,12 +275,17 @@
 	# Replace displayed input characters with a character. If the empty
 	# string is given, input will be completely hidden.
 	# This option only has an effect when hide-input is set to true.
-	hidden-character = "*"1290
+	hidden-character = "*"
+
+	# If true, use physical keys for shortcuts, regardless of the current
+	# keyboard layout. If false, use the current layout's keys.
+	physical-keybindings = true
 
 	# Instead of printing the selected entry, print the 1-based index of
 	# the selection. This option has no effect in run or drun mode. If
 	# require-match is set to false, non-matching input will still result
 	# in the input being printed.
+	print-index = false
 
 	# If true, directly launch applications on selection when in drun mode.
 	# Otherwise, just print the command line to stdout.
