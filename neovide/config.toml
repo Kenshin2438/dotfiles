@@ -1,0 +1,13 @@
+[font]
+normal = ["FiraCode Nerd Font Propo", "LXGW WenKai Mono"]
+size = 12
+hinting = "full"
+edging = "antialias"
+
+[[font.italic]]
+family = "IBM Plex Mono"
+style = "Italic"
+
+[[font.bold_italic]]
+family = "IBM Plex Mono"
+style = "Bold Italic"
