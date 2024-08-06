@@ -1,0 +1,98 @@
+* {
+  transition-property: background;
+  transition-duration: 0.2s;
+}
+
+window#waybar,
+tooltip {
+  /* I don't want to change the default font of the Tray-menu. */
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "JetBrains Mono", "LXGW Wenkai", "Font Awesome 6 Free";
+
+  background-color: rgba(38, 38, 38, 0.8);
+  border: 2px solid rgba(64, 64, 64, 0.8);
+  border-radius: 5px;
+}
+
+window#waybar.empty #window {
+  /* Display nothing if there are no windows present. */
+  color: transparent;
+}
+
+.modules-left {
+  padding-left: 5px;
+}
+
+.modules-right {
+  padding-right: 5px;
+}
+
+#clock,
+#window,
+#workspaces,
+#tray,
+#network,
+#cpu,
+#memory,
+#backlight,
+#pulseaudio,
+#battery {
+  padding: 0px 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#workspaces button {
+  border-radius: 10px;
+  padding: 0px 5px;
+}
+
+#workspaces button:hover {
+  background: rgba(129, 140, 248, 0.2);
+}
+
+#workspaces button.empty {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+#workspaces button.active {
+  background: rgba(129, 140, 248, 0.8);
+  color: rgba(255, 255, 255, 1);
+}
+
+#workspaces button.urgent {
+  background: rgba(134, 193, 102, 0.8);
+}
+
+#clock {
+  color: #fde68a;
+}
+
+#window {
+  color: #d9f99d;
+}
+
+#network {
+  color: #f9a8d4;
+}
+
+#cpu {
+  color: #d8b4fe;
+}
+
+#memory {
+  color: #a5b4fc;
+}
+
+#backlight {
+  color: #7dd3fc;
+}
+
+#pulseaudio {
+  color: #67e8f9;
+}
+
+#battery {
+  color: #86efac;
+}

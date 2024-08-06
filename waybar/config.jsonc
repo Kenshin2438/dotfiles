@@ -1,0 +1,90 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": ["clock", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "tray",
+    "network",
+    "cpu",
+    "memory",
+    "backlight",
+    "pulseaudio",
+    "battery"
+  ],
+
+  "clock": {
+    "interval": 60,
+    "format": "\uf017 {:%R}",
+    "tooltip-format": "{:%Y-%m-%d}"
+  },
+  "hyprland/window": {
+    "format": "\uf6e2 {}",
+    "separate-outputs": true,
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "$1"
+    }
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "persistent-workspaces": {
+      "*": 4
+    },
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 8
+  },
+  "network": {
+    "format-wifi": "\uf1eb {signalStrength}%",
+    "format-ethernet": "\uf6ff {ipaddr}/{cidr}",
+    "tooltip-format": "{essid} - {ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "Disconnected"
+  },
+  "cpu": {
+    "format": "\uf2db {usage:2}%"
+  },
+  "memory": {
+    "format": "\uf538 {used:0.1f}G",
+    "tooltip-format": " RAM: {used:0.2f}G / {total:0.2f}G\nSwap: {swapUsed:0.2f}G / {swapTotal:0.2f}G"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["\uf185", "\uf111"],
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{format_source} {icon} {volume}%",
+    "format-source": "\uf3c9",
+    "format-source-muted": "\uf131",
+    "format-muted": "{format_source} \uf6a9",
+    "format-icons": {
+      "headphone": "\uf025",
+      "default": ["\uf026", "\uf027", "\uf028"]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": [
+      "AudioRelay Virtual Sink",
+      "Recorder Sink",
+      "Easy Effects Sink"
+    ]
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "\uf1e6 {capacity}%",
+    "format-plugged": "\uf1e6 {capacity}%",
+    "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
+  }
+}
