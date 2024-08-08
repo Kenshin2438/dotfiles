@@ -8,9 +8,9 @@ tooltip {
   /* I don't want to change the default font of the Tray-menu. */
   font-size: 16px;
   font-weight: 600;
-  font-family: "JetBrains Mono", "LXGW Wenkai", "Font Awesome 6 Free";
+  font-family: "JetBrains Mono", "Font Awesome 6 Free", monospace;
 
-  background-color: rgba(38, 38, 38, 0.8);
+  background: rgba(38, 38, 38, 1);
   border: 2px solid rgba(64, 64, 64, 0.8);
   border-radius: 5px;
 }
@@ -29,6 +29,7 @@ window#waybar.empty #window {
 }
 
 #clock,
+#taskbar,
 #window,
 #workspaces,
 #tray,
@@ -39,15 +40,16 @@ window#waybar.empty #window {
 #pulseaudio,
 #battery {
   padding: 0px 5px;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin: 2px 0px;
 }
 
+#taskbar button,
 #workspaces button {
   border-radius: 10px;
   padding: 0px 5px;
 }
 
+#taskbar button:hover,
 #workspaces button:hover {
   background: rgba(129, 140, 248, 0.2);
 }
@@ -66,33 +68,38 @@ window#waybar.empty #window {
 }
 
 #clock {
-  color: #fde68a;
+  color: #fed7aa;
 }
 
 #window {
   color: #d9f99d;
 }
 
+#tray {
+  border-radius: 5px;
+  background: rgba(64, 64, 64, 0.8);
+}
+
 #network {
-  color: #f9a8d4;
+  color: #c4b5fd;
 }
 
 #cpu {
-  color: #d8b4fe;
+  color: #fecdd3;
 }
 
 #memory {
-  color: #a5b4fc;
+  color: #f5d0fe;
 }
 
 #backlight {
-  color: #7dd3fc;
+  color: #a5f3fc;
 }
 
 #pulseaudio {
-  color: #67e8f9;
+  color: #a7f3d0;
 }
 
 #battery {
-  color: #86efac;
+  color: #d9f99d;
 }

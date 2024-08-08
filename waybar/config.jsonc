@@ -2,22 +2,29 @@
   "layer": "top",
   "position": "top",
 
-  "modules-left": ["clock", "hyprland/window"],
+  "modules-left": ["cpu", "memory", "tray", "wlr/taskbar"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": [
-    "tray",
-    "network",
-    "cpu",
-    "memory",
-    "backlight",
-    "pulseaudio",
-    "battery"
-  ],
+  "modules-right": ["network", "backlight", "pulseaudio", "battery", "clock"],
 
   "clock": {
     "interval": 60,
     "format": "\uf017 {:%R}",
-    "tooltip-format": "{:%Y-%m-%d}"
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "ignore-list": ["Alacritty"]
   },
   "hyprland/window": {
     "format": "\uf6e2 {}",
@@ -27,16 +34,25 @@
     }
   },
   "hyprland/workspaces": {
-    "format": "{name}",
-    "persistent-workspaces": {
-      "*": 4
+    "format": "{icon}",
+    "format-icons": {
+      "default": "\uf192",
+      "empty": "\uf1ce",
+      "special": "\uf6e2",
+      // "active": "\uf192",
+      "urgent": "\uf06a"
     },
+    "persistent-workspaces": {
+      "*": 4,
+      "special:magic": []
+    },
+    "show-special": true,
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1"
   },
   "tray": {
-    "icon-size": 21,
+    "icon-size": 18,
     "spacing": 8
   },
   "network": {
