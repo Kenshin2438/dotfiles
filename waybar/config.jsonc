@@ -2,13 +2,21 @@
   "layer": "top",
   "position": "top",
 
-  "modules-left": ["cpu", "memory", "tray", "wlr/taskbar"],
-  "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["network", "backlight", "pulseaudio", "battery", "clock"],
+  "modules-left": ["hyprland/workspaces", "tray", "wlr/taskbar"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "keyboard-state",
+    "cpu",
+    "memory",
+    "network",
+    "backlight",
+    "pulseaudio",
+    "battery"
+  ],
 
   "clock": {
     "interval": 60,
-    "format": "\uf017 {:%R}",
+    "format": "\uf073 {:%m-%d \uf017 %R}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "format": {
@@ -24,7 +32,7 @@
     "icon-size": 18,
     "tooltip-format": "{title}",
     "on-click": "activate",
-    "ignore-list": ["Alacritty"]
+    "ignore-list": ["Alacritty", "QQ", "Spotify"]
   },
   "hyprland/window": {
     "format": "\uf6e2 {}",
@@ -43,7 +51,13 @@
       "urgent": "\uf06a"
     },
     "persistent-workspaces": {
-      "*": 4,
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
       "special:magic": []
     },
     "show-special": true,
@@ -58,9 +72,11 @@
   "network": {
     "format-wifi": "\uf1eb {signalStrength}%",
     "format-ethernet": "\uf6ff {ipaddr}/{cidr}",
+    "format-disconnected": "\uf127 NaN",
     "tooltip-format": "{essid} - {ifname} via {gwaddr}",
-    "format-linked": "{ifname} (No IP)",
-    "format-disconnected": "Disconnected"
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ifname}",
+    "tooltip-format-disconnected": "Disconnected"
   },
   "cpu": {
     "format": "\uf2db {usage:2}%"
@@ -102,5 +118,13 @@
     "format-charging": "\uf1e6 {capacity}%",
     "format-plugged": "\uf1e6 {capacity}%",
     "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
+  },
+  "keyboard-state": {
+    "capslock": true,
+    "format": "{icon} {name}",
+    "format-icons": {
+      "locked": "\uf023",
+      "unlocked": "\uf09c"
+    }
   }
 }

@@ -6,18 +6,18 @@
 window#waybar,
 tooltip {
   /* I don't want to change the default font of the Tray-menu. */
-  font-size: 16px;
-  font-weight: 600;
   font-family: "JetBrains Mono", "Font Awesome 6 Free", monospace;
-
-  background: rgba(38, 38, 38, 1);
-  border: 2px solid rgba(64, 64, 64, 0.8);
-  border-radius: 5px;
+  font-size: 1rem;
 }
 
-window#waybar.empty #window {
-  /* Display nothing if there are no windows present. */
-  color: transparent;
+window#waybar {
+  background: rgba(25, 26, 34, 0.7);
+}
+
+tooltip {
+  background: rgba(25, 26, 34, 1);
+  border: 2px solid rgba(64, 64, 64, 0.8);
+  border-radius: 10px;
 }
 
 .modules-left {
@@ -28,6 +28,7 @@ window#waybar.empty #window {
   padding-right: 5px;
 }
 
+#keyboard-state,
 #clock,
 #taskbar,
 #window,
@@ -39,8 +40,12 @@ window#waybar.empty #window {
 #backlight,
 #pulseaudio,
 #battery {
-  padding: 0px 5px;
-  margin: 2px 0px;
+  margin: 3px 5px 5px 5px;
+}
+
+#workspaces {
+  border-radius: 10px;
+  background: rgba(38, 44, 60, 0.8);
 }
 
 #taskbar button,
@@ -75,11 +80,6 @@ window#waybar.empty #window {
   color: #d9f99d;
 }
 
-#tray {
-  border-radius: 5px;
-  background: rgba(64, 64, 64, 0.8);
-}
-
 #network {
   color: #c4b5fd;
 }
@@ -102,4 +102,12 @@ window#waybar.empty #window {
 
 #battery {
   color: #d9f99d;
+}
+
+#keyboard-state label {
+  color: #44403c;
+}
+
+#keyboard-state label.locked {
+  color: #e7e5e4;
 }
