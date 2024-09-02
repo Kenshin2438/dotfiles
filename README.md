@@ -4,10 +4,6 @@ My `dotfiles` for [Arch]Linux (Hyprland).
 
 ---
 
-## TODO
-
-- [ ] Replace `waybar` with `ags` [Aylur's GTK Shell](https://aylur.github.io/ags-docs)
-
 ## Installation
 
 ### Dependency
@@ -18,19 +14,22 @@ My `dotfiles` for [Arch]Linux (Hyprland).
 - Shell: `fish`
 - Window Manager: `hyprland`
   - Hypr Ecosystem(hypr\* projects): `hyprlock`, `hypridle`
+  - Plugins: `hyprexpo`
 - Theme:
+  - QT: [Kvantum catppuccin-frappe](https://github.com/catppuccin/Kvantum)
   - GTK(3): `orchis-theme`
-  - Icon: `adwaita-icon-theme`
+  - Icon: `papirus-icon-theme`
   - Cursor: `bibata-cursor-theme`
   - Shell Prompt: `starship`
 - Fonts:
   - basics(`noto-fonts-*`)
   - ZH-CN: `ttf-lxgw-wenkai`, `adobe-source-code-pro-fonts`
-  - Nerd-Font: `ttf-firacode-nerd`, `otf-comicshanns-nerd`
+  - Symbols/Mono/Nerd Font: `ttf-firacode-nerd`, `otf-comicshanns-nerd`, `ttf-jetbrains-mono`, `ttf-ibm-plex`
 - File Explorer: `nautilus [gnome]`
+- Document Viewer: `evince [gnome]`
 - Image Viewer: `loupe [gnome]`
-- Music Player: `spotify-launcher`, `netease-cloud-music-gtk4`
-- Editor: `neovim`, `code`, `obsidian`
+- Music Player: `spotify-launcher`
+- Editor: `neovide(neovim)`, `code`, `obsidian`, `zed`
 
 ### Enabling Configurations
 
@@ -48,4 +47,37 @@ ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
 
 ```shell
 sudo cp ~/dotfiles/login/issue /etc/issue
+```
+
+### Misc. Better `pacman/yay`
+
+```diff
+# File: /etc/pacman.conf
+========================
+# Misc options
++ Color
++ VerbosePkgLists
++ ParallelDownloads = 5
+```
+
+### Misc. Spotify
+
+```shell
+yay -S spotify-launcher spicetify-cli
+
+spicetify config # To create ~/.config/spicetify/config-xpui.ini
+spicetify backup apply
+
+cd /tmp
+git clone --depth=1 https://github.com/catppuccin/spicetify.git
+cd spicetify/
+cp -r catppuccin ~/.config/spicetify/Themes/
+spicetify config current_theme catppuccin
+spicetify config color_scheme frappe
+
+curl https://raw.githubusercontent.com/rxri/spicetify-extensions/main/adblock/adblock.js \
+  > ~/.config/spicetify/Extensions/adblock.js
+spicetify config extensions adblock.js
+
+spicetify apply
 ```
