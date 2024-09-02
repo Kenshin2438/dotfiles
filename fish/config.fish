@@ -3,7 +3,8 @@ set -gx EDITOR nvim
 
 if status is-login # Auto start Hyprland on tty1
     if test -z "$DISPLAY" -a $XDG_VTNR = 1
-        exec dbus-run-session Hyprland &>/dev/null
+        mkdir -p ~/.cache
+        exec Hyprland > ~/.cache/hyprland.log 2>&1
     end
 end
 
