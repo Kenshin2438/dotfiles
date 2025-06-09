@@ -1,0 +1,30 @@
+add_newline = false
+
+format = """
+$username $os $directory \
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$cmd_duration
+$character"""
+
+[username]
+style_user = "italic fg:blue"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[os]
+style = "fg:yellow"
+format = "on [$name]($style)"
+disabled = false
+
+[directory]
+read_only = "  "
+style = "underline italic fg:cyan"
+truncation_length = 8
+truncation_symbol = "../"
+format = '[$path]($style)'
