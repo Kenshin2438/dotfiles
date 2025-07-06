@@ -1,0 +1,39 @@
+{
+  "auto_update": false,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte - No Italics",
+    "dark": "Catppuccin Macchiato - No Italics"
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato"
+  },
+  "autosave": "on_focus_change",
+  "base_keymap": "VSCode",
+  "show_whitespaces": "all",
+  "tab_size": 2,
+  "buffer_font_family": "FiraCode Nerd Font",
+  "buffer_font_fallbacks": ["BlexMono Nerd Font", "霞鹜文楷"],
+  "buffer_font_size": 14,
+  "buffer_font_features": { "calt": true },
+  "ui_font_family": "Monaco",
+  "ui_font_fallbacks": ["FiraCode Nerd Font", "霞鹜文楷"],
+  "ui_font_size": 14,
+  "terminal": {
+    "shell": {
+      "with_arguments": {
+        "program": "pwsh",
+        "args": ["-NoLogo"]
+      }
+    },
+    "font_family": "BlexMono Nerd Font",
+    "font_fallbacks": ["霞鹜文楷"],
+    "line_height": "standard"
+  }
+}
