@@ -12,12 +12,11 @@ function set_proxy
     end
 
     if not string length --quiet $port
-        set port 2080
+        set port 7897
     end
 
     set -l proxy "$type://$host:$port"
     echo $proxy
-
 
     set --global -x HTTP_PROXY $proxy
     set --global -x HTTPS_PROXY $proxy
