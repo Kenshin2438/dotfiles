@@ -1,18 +1,21 @@
 return {
-  "akinsho/toggleterm.nvim",
-  event = "VeryLazy",
-  cmd = "ToggleTerm",
-  keys = {
-    { "<F4>", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" },
-  },
-  opts = {
-    open_mapping = [[<F4>]],
-    direction = "float",
-    shade_filetypes = {},
-    hide_numbers = true,
-    insert_mappings = true,
-    terminal_mappings = true,
-    start_in_insert = true,
-    close_on_exit = true,
+  {
+    "akinsho/toggleterm.nvim",
+    event = "VeryLazy",
+    cmd = "ToggleTerm",
+    opts = {
+      open_mapping = [[<c-\>]],
+      shell = "fish",
+      direction = "float",
+      shade_terminals = false,
+      float_opts = {
+        border = "curved",
+        width = math.floor(vim.fn.winwidth(0) * 0.85),
+        height = math.floor(vim.fn.winheight(0) * 0.85),
+      },
+      insert_mappings = true,
+      start_in_insert = true,
+      close_on_exit = true,
+    },
   },
 }
