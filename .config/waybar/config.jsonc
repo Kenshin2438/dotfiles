@@ -1,8 +1,8 @@
 {
   "layer": "top",
   "position": "top",
-
-  "modules-left": ["hyprland/workspaces", "tray", "wlr/taskbar"],
+  "reload_style_on_change": true,
+  "modules-left": ["hyprland/workspaces", "tray"],
   "modules-center": ["clock"],
   "modules-right": [
     "keyboard-state",
@@ -20,54 +20,51 @@
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "days": "<span color='#ecc6d9'><b>{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+        "today": "<span><b><u>{}</u></b></span>"
       }
     }
   },
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 18,
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "ignore-list": ["Alacritty", "QQ", "Spotify"]
-  },
-  "hyprland/window": {
-    "format": "\uf6e2 {}",
-    "separate-outputs": true,
-    "rewrite": {
-      "(.*) — Mozilla Firefox": "$1"
-    }
-  },
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "{icon}:{windows}",
     "format-icons": {
-      "default": "\uf192",
-      "empty": "\uf1ce",
+      // "default": "\uf192",
+      // "empty": "\uf1ce",
       "special": "\uf6e2",
       // "active": "\uf192",
       "urgent": "\uf06a"
     },
     "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "special:magic": []
+      "*": [1, 2, 3, 4, 5, 6, 7, "special:magic"]
     },
     "show-special": true,
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1"
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "workspace-taskbar": {
+      "enable": true,
+      "update-active-window": true,
+      "format": "{icon}",
+      "icon-size": 16
+    }
   },
   "tray": {
-    "icon-size": 18,
+    "icon-size": 16,
     "spacing": 8
+  },
+  "keyboard-state": {
+    "capslock": true,
+    "format": "{icon} {name}",
+    "format-icons": {
+      "locked": "\uf023",
+      "unlocked": "\uf09c"
+    }
+  },
+  "cpu": {
+    "format": "\uf2db {usage:2}%"
+  },
+  "memory": {
+    "format": "\uf538 {used:0.1f}G",
+    "tooltip-format": " RAM: {used:0.2f}G / {total:0.2f}G\nSwap: {swapUsed:0.2f}G / {swapTotal:0.2f}G"
   },
   "network": {
     "format-wifi": "\uf1eb {signalStrength}%",
@@ -78,15 +75,7 @@
     "tooltip-format-ethernet": "{ifname}",
     "tooltip-format-disconnected": "Disconnected"
   },
-  "cpu": {
-    "format": "\uf2db {usage:2}%"
-  },
-  "memory": {
-    "format": "\uf538 {used:0.1f}G",
-    "tooltip-format": " RAM: {used:0.2f}G / {total:0.2f}G\nSwap: {swapUsed:0.2f}G / {swapTotal:0.2f}G"
-  },
   "backlight": {
-    "device": "intel_backlight",
     "format": "{icon} {percent}%",
     "format-icons": ["\uf185", "\uf111"],
     "tooltip": false
@@ -101,12 +90,7 @@
       "default": ["\uf026", "\uf027", "\uf028"]
     },
     "scroll-step": 1,
-    "on-click": "pavucontrol",
-    "ignored-sinks": [
-      "AudioRelay Virtual Sink",
-      "Recorder Sink",
-      "Easy Effects Sink"
-    ]
+    "on-click": "pavucontrol"
   },
   "battery": {
     "states": {
@@ -118,13 +102,5 @@
     "format-charging": "\uf1e6 {capacity}%",
     "format-plugged": "\uf1e6 {capacity}%",
     "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
-  },
-  "keyboard-state": {
-    "capslock": true,
-    "format": "{icon} {name}",
-    "format-icons": {
-      "locked": "\uf023",
-      "unlocked": "\uf09c"
-    }
   }
 }

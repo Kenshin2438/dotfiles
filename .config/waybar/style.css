@@ -1,113 +1,130 @@
+/* @import "catppuccin-mocha.css"; */
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@define-color text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color overlay2 #9399b2;
+@define-color overlay1 #7f849c;
+@define-color overlay0 #6c7086;
+@define-color surface2 #585b70;
+@define-color surface1 #45475a;
+@define-color surface0 #313244;
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
+
 * {
-  transition-property: background;
-  transition-duration: 0.2s;
-}
-
-window#waybar,
-tooltip {
-  /* I don't want to change the default font of the Tray-menu. */
-  font-family: "JetBrains Mono", "Font Awesome 6 Free", monospace;
-  font-size: 1rem;
-}
-
-window#waybar {
-  background: rgba(25, 26, 34, 0.7);
-}
-
-tooltip {
-  background: rgba(25, 26, 34, 1);
-  border: 2px solid rgba(64, 64, 64, 0.8);
-  border-radius: 10px;
+  font-family: "FiraMono Nerd Font Propo", "LXGW WenKai Mono", monospace;
+  font-size: 14px;
+  border: none;
+  min-height: 0;
 }
 
 .modules-left {
-  padding-left: 5px;
+  border-radius: 10px;
+  margin: 2px 5px;
 }
 
-.modules-right {
-  padding-right: 5px;
-}
-
-#keyboard-state,
-#clock,
-#taskbar,
-#window,
 #workspaces,
-#tray,
-#network,
-#cpu,
-#memory,
-#backlight,
-#pulseaudio,
-#battery {
-  margin: 3px 5px 5px 5px;
+#tray {
+  margin: 0px 5px;
+  padding: 0;
 }
 
 #workspaces {
+  background-color: alpha(@sapphire, 0.1);
   border-radius: 10px;
-  background: rgba(38, 44, 60, 0.8);
 }
 
-#taskbar button,
 #workspaces button {
+  background-color: transparent;
+  color: @sapphire;
+  padding: 5px;
   border-radius: 10px;
-  padding: 0px 5px;
 }
 
-#taskbar button:hover,
 #workspaces button:hover {
-  background: rgba(129, 140, 248, 0.2);
+  background-color: alpha(@sapphire, 0.5);
 }
 
 #workspaces button.empty {
-  color: rgba(255, 255, 255, 0.25);
+  color: alpha(@sapphire, 0.2);
 }
 
 #workspaces button.active {
-  background: rgba(129, 140, 248, 0.8);
-  color: rgba(255, 255, 255, 1);
+  background-color: alpha(@sky, 0.5);
 }
 
 #workspaces button.urgent {
-  background: rgba(134, 193, 102, 0.8);
+  background-color: @rosewater;
+}
+
+.modules-center {
+  background-color: inherit;
+  margin: 2px 5px;
 }
 
 #clock {
-  color: #fed7aa;
+  color: @flamingo;
 }
 
-#window {
-  color: #d9f99d;
+.modules-right {
+  border-radius: 10px;
+  margin: 2px 5px;
 }
 
-#network {
-  color: #c4b5fd;
-}
-
-#cpu {
-  color: #fecdd3;
-}
-
-#memory {
-  color: #f5d0fe;
-}
-
-#backlight {
-  color: #a5f3fc;
-}
-
-#pulseaudio {
-  color: #a7f3d0;
-}
-
+#keyboard-state,
+#cpu,
+#memory,
+#network,
+#backlight,
+#pulseaudio,
 #battery {
-  color: #d9f99d;
+  margin: 0px 5px;
+  padding: 0;
 }
 
 #keyboard-state label {
-  color: #44403c;
+  color: alpha(@pink, 0.2);
 }
 
 #keyboard-state label.locked {
-  color: #e7e5e4;
+  color: @pink;
+}
+
+#cpu {
+  color: @mauve;
+}
+
+#memory {
+  color: @red;
+}
+
+#network {
+  color: @maroon;
+}
+
+#backlight {
+  color: @peach;
+}
+
+#pulseaudio {
+  color: @yellow;
+}
+
+#battery {
+  color: @green;
 }
