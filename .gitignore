@@ -1,0 +1,4 @@
+.zed/
+.vscode/
+
+.config/hypr/workspaces.conf

@@ -15,8 +15,6 @@ GPU 1: NVIDIA GeForce RTX 4070 Max-Q / Mobile [Discrete]
 GPU 2: AMD Radeon 780M Graphics [Integrated]
 ```
 
-## Installation
-
 ### Dependency
 
 [Reddit r/hyprland | What applications do you use for basic stuff? ](https://www.reddit.com/r/hyprland/comments/1bl735k/what_applications_do_you_use_for_basic_stuff/)
@@ -27,14 +25,10 @@ GPU 2: AMD Radeon 780M Graphics [Integrated]
   - Hypr Ecosystem(hypr\* projects): `hyprlock`, `hypridle`
 - Theme:
   - QT: [Kvantum catppuccin-frappe](https://github.com/catppuccin/Kvantum)
-  - GTK(3): `orchis-theme`
+  - GTK[2/3/4]: `adw-gtk3`
   - Icon: `papirus-icon-theme`
   - Cursor: `bibata-cursor-theme`
   - Shell Prompt: `starship`
-- Fonts:
-  - basics(`noto-fonts-*`)
-  - ZH-CN: `ttf-lxgw-wenkai`, `adobe-source-code-pro-fonts`
-  - Symbols/Mono/Nerd Font: `ttf-firacode-nerd`, `otf-comicshanns-nerd`, `ttf-jetbrains-mono`, `ttf-ibm-plex`
 - File Explorer: `nautilus [gnome]`
 - Document Viewer: `evince [gnome]`
 - Music Player: `spotify-launcher`
@@ -43,8 +37,3 @@ GPU 2: AMD Radeon 780M Graphics [Integrated]
 ### Enabling Configurations
 
 **Create symbolic links** and **resolve conflicts** _manually_.
-
-```shell
-ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
-...
-```
