@@ -84,7 +84,7 @@
     "format": "{format_source} {icon} {volume}%",
     "format-source": "\uf3c9",
     "format-source-muted": "\uf131",
-    "format-muted": "{format_source} \uf6a9",
+    "format-muted": "{format_source} \ueee8",
     "format-icons": {
       "headphone": "\uf025",
       "default": ["\uf026", "\uf027", "\uf028"]
