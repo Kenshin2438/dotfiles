@@ -1,0 +1,13 @@
+\.git
+\.gitignore
+\.gitmodules
+
+\.editorconfig
+\.vscode
+\.zed
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+docs

@@ -36,4 +36,9 @@ GPU 2: AMD Radeon 780M Graphics [Integrated]
 
 ### Enabling Configurations
 
-**Create symbolic links** and **resolve conflicts** _manually_.
+```
+cd $HOME/
+git clone git@github.com:Kenshin2438/dotfiles.git
+cd dotfiles
+stow .
+```
