@@ -1,6 +1,7 @@
 {
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
+  "output": "eDP-1",
   "reload_style_on_change": true,
   "modules-left": ["hyprland/workspaces", "tray"],
   "modules-center": ["clock"],
@@ -10,7 +11,7 @@
     "memory",
     "network",
     "backlight",
-    "pulseaudio",
+    "wireplumber",
     "battery"
   ],
 
@@ -80,7 +81,7 @@
     "format-icons": ["\uf185", "\uf111"],
     "tooltip": false
   },
-  "pulseaudio": {
+  "wireplumber": {
     "format": "{format_source} {icon} {volume}%",
     "format-source": "\uf3c9",
     "format-source-muted": "\uf131",
@@ -90,7 +91,7 @@
       "default": ["\uf026", "\uf027", "\uf028"]
     },
     "scroll-step": 1,
-    "on-click": "pavucontrol"
+    "on-click": "helvum"
   },
   "battery": {
     "states": {

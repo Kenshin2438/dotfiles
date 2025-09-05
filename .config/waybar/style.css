@@ -91,7 +91,7 @@
 #memory,
 #network,
 #backlight,
-#pulseaudio,
+#wireplumber,
 #battery {
   margin: 0px 5px;
   padding: 0;
@@ -121,7 +121,7 @@
   color: @peach;
 }
 
-#pulseaudio {
+#wireplumber {
   color: @yellow;
 }
 
