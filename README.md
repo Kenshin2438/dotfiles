@@ -41,4 +41,5 @@ cd $HOME/
 git clone git@github.com:Kenshin2438/dotfiles.git
 cd dotfiles
 stow .
+matugen image $HOME/wallpapers/{IMAGE}
 ```

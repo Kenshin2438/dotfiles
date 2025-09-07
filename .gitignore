@@ -2,3 +2,9 @@
 .vscode/
 
 .config/hypr/workspaces.conf
+.config/hypr/monitors.conf
+
+.config/fuzzel/matugen.ini
+.config/hypr/conf/matugen.conf
+.config/kitty/matugen.conf
+.config/fish/themes/matugen.theme
