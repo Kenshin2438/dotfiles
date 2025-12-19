@@ -1,0 +1,20 @@
+{
+  "icon_theme": "Catppuccin Macchiato",
+  "proxy": "http://127.0.0.1:7890",
+  "disable_ai": true,
+  "auto_update": true,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "autosave": "on_focus_change",
+  "base_keymap": "VSCode",
+  "show_whitespaces": "all",
+  "tab_size": 2,
+  "ui_font_family": "Monaco",
+  "ui_font_fallbacks": ["霞鹜文楷等宽"],
+  "ui_font_size": 14.0,
+  "buffer_font_family": "FiraCode Nerd Font",
+  "buffer_font_fallbacks": ["霞鹜文楷等宽"],
+  "buffer_font_size": 14
+}
