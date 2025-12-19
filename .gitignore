@@ -1,0 +1,6 @@
+## Mihomo
+.config/mihomo/**
+!.config/mihomo/config.yaml.tmpl
+!.config/mihomo/build-config.ps1
+!.config/mihomo/MihomoLauncher.ps1
+
