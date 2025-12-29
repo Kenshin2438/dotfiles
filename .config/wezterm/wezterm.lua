@@ -10,8 +10,8 @@ config.font = wezterm.font_with_fallback({ "FiraCode Nerd Font", "LXGW WenKai Mo
 config.font_rules = {
 	{ italic = true, font = wezterm.font("IBM Plex Mono", { italic = true }) },
 }
-config.font_size = 11
-config.command_palette_font_size = 11
+config.font_size = 10
+config.command_palette_font_size = 10
 
 --- window ---
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
@@ -32,6 +32,9 @@ config.window_frame = { font = config.font }
 --- Launcher ---
 config.default_prog = { "nu" }
 -- config.default_prog = {"pwsh", "-NoLogo"}
+config.launch_menu = {
+	{ label = "PowerShell", args = { "pwsh", "-NoLogo" } },
+}
 
 --- KeyBindings ---
 config.disable_default_key_bindings = false

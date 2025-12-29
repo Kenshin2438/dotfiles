@@ -1,3 +1,18 @@
+## Prompt
+function prompt {
+  $isRoot = ([Security.Principal.WindowsPrincipal]::New(
+      [Security.Principal.WindowsIdentity]::GetCurrent()
+  )).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
+
+  $color  = if ($isRoot) {"Red"} else {"Green"}
+  $marker = if ($isRoot) {"#"}   else {"$"}
+
+  Write-Host "$env:USERNAME " -ForegroundColor $color -NoNewline
+  Write-Host "$PWD " -ForegroundColor Magenta -NoNewline
+  Write-Host $marker -ForegroundColor $color -NoNewline
+  return " "
+}
+
 ## PSReadline Configuration
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
