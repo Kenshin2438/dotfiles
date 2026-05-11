@@ -7,3 +7,13 @@ if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && $SHLVL == 1 ]]; t
     fi
     exec fish $LOGIN_OPTION
 fi
+
+## Configuration for Oh-My-Zsh
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+

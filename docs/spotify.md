@@ -5,7 +5,6 @@
 
 ```shell
 yay -S spotify-launcher
-ln -sf 
 ```
 
 ---

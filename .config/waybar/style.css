@@ -27,7 +27,7 @@
 @define-color crust #11111b;
 
 * {
-  font-family: "FiraMono Nerd Font Propo", "LXGW WenKai Mono", monospace;
+  font-family: "FiraCode Nerd Font Propo", "LXGW WenKai Mono", monospace;
   font-size: 14px;
   border: none;
   min-height: 0;

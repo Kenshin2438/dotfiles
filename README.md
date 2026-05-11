@@ -9,7 +9,7 @@ kenshin@mechrevo
 ----------------
 OS: Arch Linux x86_64
 Host: yilong15 Pro Series GM5HG7A
-Kernel: Linux 6.15.6-zen1-1-zen
+Kernel: Linux 7.0.5-zen1-1-zen
 CPU: AMD Ryzen 7 8845H (16) @ 5.10 GHz
 GPU 1: NVIDIA GeForce RTX 4070 Max-Q / Mobile [Discrete]
 GPU 2: AMD Radeon 780M Graphics [Integrated]

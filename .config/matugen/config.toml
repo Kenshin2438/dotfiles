@@ -3,7 +3,7 @@ reload_apps = true
 
 [config.wallpaper]
 command = "hyprctl"
-arguments = ["hyprpaper", "reload", ","]
+arguments = ["hyprpaper", "wallpaper", ","]
 set = true
 
 ## Templates

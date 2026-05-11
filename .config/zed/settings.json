@@ -7,7 +7,7 @@
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte - No Italics",
-    "dark": "Catppuccin Macchiato - No Italics"
+    "dark": "Ayu Mirage"
   },
   "icon_theme": {
     "mode": "system",
@@ -22,10 +22,5 @@
   "buffer_font_size": 14,
   "buffer_font_features": { "calt": true },
   "ui_font_family": "Monaco",
-  "ui_font_size": 14,
-  "terminal": {
-    "shell": "system",
-    "font_family": "IBM Plex Mono",
-    "line_height": "standard"
-  }
+  "ui_font_size": 14
 }
