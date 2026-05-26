@@ -23,8 +23,8 @@ $REPO = $PSScriptRoot
 
 function main {
     LinkFiles -Source "$REPO\.config"           -Destination "$HOME\.config"
-    LinkFiles -Source "$REPO\AppData\Local"     -Destination "$HOME\AppData\Local"
-    LinkFiles -Source "$REPO\AppData\Roaming"   -Destination "$HOME\AppData\Roaming"
+    LinkFiles -Source "$REPO\AppData\Local"     -Destination "$ENV:LOCALAPPDATA"
+    LinkFiles -Source "$REPO\AppData\Roaming"   -Destination "$ENV:APPDATA"
     LinkFiles -Source "$REPO\Documents"         -Destination "$HOME\Documents" 
 }
 

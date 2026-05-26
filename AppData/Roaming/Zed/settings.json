@@ -1,11 +1,28 @@
 {
-  "icon_theme": "Catppuccin Macchiato",
+  "format_on_save": "off",
+  "cli_default_open_behavior": "existing_window",
+  "ssh_connections": [
+    {
+      "host": "mac-mini-m4",
+      "args": [],
+      "projects": []
+    }
+  ],
+  "debugger": {
+    "dock": "left"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "terminal": {
+    "dock": "bottom"
+  },
   "proxy": "http://127.0.0.1:7890",
   "disable_ai": true,
   "auto_update": true,
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
@@ -14,7 +31,7 @@
   "ui_font_family": "Monaco",
   "ui_font_fallbacks": ["霞鹜文楷等宽"],
   "ui_font_size": 14.0,
-  "buffer_font_family": "FiraCode Nerd Font",
+  "buffer_font_family": "Monaco",
   "buffer_font_fallbacks": ["霞鹜文楷等宽"],
-  "buffer_font_size": 14
+  "buffer_font_size": 12.0,
 }

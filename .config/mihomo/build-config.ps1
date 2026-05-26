@@ -4,6 +4,9 @@ param (
     [switch]$buildMihomoLauncher
 )
 
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+[Console]::InputEncoding  = [System.Text.Encoding]::UTF8
+
 # Converts a SecureString to plain text while ensuring secure memory cleanup
 # The BSTR is zeroed before being freed to prevent credential exposure in memory
 function Get-SecureStringValue {

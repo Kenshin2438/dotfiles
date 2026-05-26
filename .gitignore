@@ -4,6 +4,6 @@
 !.config/mihomo/build-config.ps1
 !.config/mihomo/MihomoLauncher.ps1
 
-## Zed
-AppData/Roaming/Zed/**
-!AppData/Roaming/Zed/settings.json
+## PowerShell
+Documents/PowerShell/**
+!Documents/PowerShell/Microsoft.PowerShell_profile.ps1
