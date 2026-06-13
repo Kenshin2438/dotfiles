@@ -1,4 +1,35 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["@tarquinen/opencode-dcp@latest", "oh-my-openagent@latest"],
+  "plugin": ["@tarquinen/opencode-dcp@latest", "oh-my-opencode-slim"],
+  "autoupdate": false,
+  "agent": {
+    "explore": {
+      "disable": true,
+    },
+    "general": {
+      "disable": true,
+    },
+    "build": {
+      "disable": true,
+    },
+    "plan": {
+      "disable": true,
+    },
+  },
+  "lsp": true,
+  "disabled_providers": [],
+  "provider": {
+    "rightcode": {
+      "name": "RightCode",
+      "npm": "@ai-sdk/openai",
+      "options": {
+        "baseURL": "https://www.right.codes/codex-pro/v1",
+      },
+      "models": {
+        "gpt-5.5": {
+          "name": "GPT 5.5",
+        },
+      },
+    },
+  },
 }

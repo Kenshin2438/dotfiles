@@ -7,3 +7,6 @@
 ## PowerShell
 Documents/PowerShell/**
 !Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+
+## Agents
+.agents/

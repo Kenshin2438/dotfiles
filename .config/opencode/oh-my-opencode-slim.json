@@ -1,0 +1,66 @@
+{
+  "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
+  "preset": "default",
+  "disabled_agents": [],
+  "presets": {
+    "default": {
+      "orchestrator": {
+        "model": "rightcode/gpt-5.5",
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": "kimi-for-coding/k2p6",
+        "variant": "max",
+        "skills": ["*"],
+        "mcps": []
+      },
+      "council": {
+        "model": "deepseek/deepseek-v4-pro",
+        "variant": "high",
+        "skills": [],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "opencode-go/minimax-m2.7",
+        "variant": "high",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "explorer": {
+        "model": "opencode-go/minimax-m2.7",
+        "variant": "medium",
+        "skills": [],
+        "mcps": []
+      },
+      "designer": {
+        "model": "kimi-for-coding/k2p6",
+        "variant": "medium",
+        "skills": ["agent-browser"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "deepseek/deepseek-v4-flash",
+        "variant": "high"
+      },
+      "observer": {
+        "model": "kimi-for-coding/k2p5"
+      }
+    }
+  },
+  "council": {
+    "default_preset": "default",
+    "presets": {
+      "default": {
+        "kimi": { "model": "kimi-for-coding/k2p6", "variant": "high" },
+        "deepseek": { "model": "deepseek/deepseek-v4-pro", "variant": "max" }
+      }
+    }
+  },
+  "todoContinuation": {
+    "autoEnable": true,
+    "autoEnableThreshold": 4,
+    "maxContinuations": 50,
+    "cooldownMs": 3000
+  }
+}

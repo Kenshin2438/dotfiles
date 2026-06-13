@@ -39,3 +39,6 @@ function Disable-Proxy {
   if ($env:NO_PROXY) { Remove-Item env:NO_PROXY }
   Write-Host "[Proxy OFF] unset ALL_PROXY, HTTPS_PROXY and HTTP_PROXY." -ForegroundColor DarkGray
 }
+
+## OpenCode
+Set-Item env:OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS "true"

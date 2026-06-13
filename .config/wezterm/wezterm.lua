@@ -6,7 +6,7 @@ if wezterm.config_builder then
 end
 
 --- Font ---
-config.font = wezterm.font_with_fallback({ "FiraCode Nerd Font", "LXGW WenKai Mono" })
+config.font = wezterm.font_with_fallback({ "FiraCode Nerd Font", "LXGW WenKai" })
 config.font_rules = {
 	{ italic = true, font = wezterm.font("IBM Plex Mono", { italic = true }) },
 }
@@ -24,14 +24,14 @@ config.enable_scroll_bar = false
 config.show_new_tab_button_in_tab_bar = false
 
 --- Theming ---
-config.color_scheme = "Ayu Mirage"
+-- config.color_scheme = "Ayu Mirage"
 -- config.window_background_opacity = 0.95
 -- config.win32_system_backdrop = "Acrylic"
 config.window_frame = { font = config.font }
 
 --- Launcher ---
-config.default_prog = { "nu" }
--- config.default_prog = {"pwsh", "-NoLogo"}
+-- config.default_prog = { "nu" }
+config.default_prog = {"pwsh", "-NoLogo"}
 config.launch_menu = {
 	{ label = "PowerShell", args = { "pwsh", "-NoLogo" } },
 }
