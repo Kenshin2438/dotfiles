@@ -1,3 +1,17 @@
+## Mihomo
+.config/mihomo/**
+!.config/mihomo/config.yaml.tmpl
+!.config/mihomo/build-config.ps1
+!.config/mihomo/MihomoLauncher.ps1
+
+## PowerShell
+Documents/PowerShell/**
+!Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+
+## Agents
+.agents/
+
+## Linux
 .zed/
 .vscode/
 

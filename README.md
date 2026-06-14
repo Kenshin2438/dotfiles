@@ -1,4 +1,4 @@
-My `dotfiles` for [Arch]Linux (Hyprland).
+My `dotfiles` for [Arch]Linux (Hyprland) and Windows 11.
 
 **_Important: use at your own risk. Test with dummy files before use it with your real dotfiles._**
 
@@ -9,7 +9,7 @@ kenshin@mechrevo
 ----------------
 OS: Arch Linux x86_64
 Host: yilong15 Pro Series GM5HG7A
-Kernel: Linux 7.0.5-zen1-1-zen
+Kernel: Linux 7.0.5-zen1-1-1-zen
 CPU: AMD Ryzen 7 8845H (16) @ 5.10 GHz
 GPU 1: NVIDIA GeForce RTX 4070 Max-Q / Mobile [Discrete]
 GPU 2: AMD Radeon 780M Graphics [Integrated]
@@ -34,7 +34,7 @@ GPU 2: AMD Radeon 780M Graphics [Integrated]
 - Music Player: `spotify-launcher`
 - Editor: `neovide(neovim)`, `code`, `zed`
 
-### Enabling Configurations
+### Enabling Configurations (Linux)
 
 ```
 cd $HOME/
@@ -43,3 +43,13 @@ cd dotfiles
 stow .
 matugen image $HOME/wallpapers/{IMAGE}
 ```
+
+### Enabling Configurations (Windows)
+
+```powershell
+.\setup.ps1 -WhatIf
+```
+
+### opencode
+
+- RefLink https://github.com/bpinheiroms/dotfiles

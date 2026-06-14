@@ -1,0 +1,131 @@
+mixed-port: 7890
+ipv6: false
+allow-lan: false
+mode: rule
+log-level: info
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: strict
+global-client-fingerprint: chrome
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+external-controller: 127.0.0.1:9090
+external-ui: metacubexd
+external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+
+geodata-mode: true
+geodata-loader: standard
+geox-url:
+  geoip: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip-lite.dat'
+  geosite: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
+  mmdb: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country-lite.mmdb'
+geo-auto-update: true
+geo-update-interval: 48
+
+proxy-providers:
+  PROVIDER:
+    type: http
+    url: '__PROVIDER_URL__'
+    interval: 86400
+    proxy: DIRECT
+    health-check:
+      enable: true
+      url: 'https://www.gstatic.com/generate_204'
+      interval: 300
+      lazy: true
+      expected-status: 204
+
+dns:
+  enable: true
+  cache-algorithm: arc
+  ipv6: false
+  listen: 127.0.0.1:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.1/8
+  fake-ip-filter:
+    - 'geosite:private'
+    - 'geosite:cn'
+  nameserver:
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+  fallback:
+    - tls://8.8.4.4
+    - tls://1.1.1.1
+  proxy-server-nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  direct-nameserver:
+    - system
+  nameserver-policy:
+    geosite:cn,private:
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
+    geosite:category-ads-all: rcode://success
+
+tun:
+  enable: false
+  stack: mixed
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  strict-route: false
+  dns-hijack: [any:53, tcp://any:53]
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  force-domain:
+    - +.v2ex.com
+  skip-domain:
+    - Mijia Cloud
+
+proxy-groups:
+  - { name: Proxy, type: select, proxies: [DIRECT, 香港, 美国, 新加坡, 其它地区] }
+  - { name: Final, type: select, proxies: [DIRECT, Proxy] }
+  - { name: Spotify, type: select, proxies: [香港, 美国, 新加坡, 其它地区] }
+  - { name: AI, type: select, proxies: [香港, 美国, 新加坡, 其它地区] }
+  - { name: '全部节点', type: select, include-all: true, exclude-type: direct }
+  - { name: '香港', type: url-test, include-all: true, filter: '(?i)香港' }
+  - { name: '美国', type: url-test, include-all: true, filter: '(?i)美国' }
+  - { name: '新加坡', type: url-test, include-all: true, filter: '(?i)新加坡' }
+  - { name: '其它地区', type: url-test, include-all: true, filter: '(?i)^(?!.*(?:香港|新加坡|美国)).*' }
+
+rules:
+  # 阻断
+  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,category-porn,REJECT
+  - GEOSITE,adobe,REJECT
+  # 局域网 & 国内
+  - GEOSITE,private,DIRECT
+  - GEOIP,private,DIRECT,no-resolve
+  - GEOSITE,cn,DIRECT
+  - GEOIP,cn,DIRECT,no-resolve
+  # 学术
+  - GEOSITE,category-scholar-cn,DIRECT
+  - GEOSITE,google-scholar,Proxy
+  # 应用
+  - GEOSITE,category-ai-cn,DIRECT
+  - GEOSITE,category-ai-!cn,AI
+  - GEOSITE,onedrive,DIRECT
+  - GEOSITE,microsoft@cn,DIRECT
+  - GEOSITE,steam@cn,DIRECT
+  - GEOSITE,category-games@cn,DIRECT
+  - GEOSITE,bilibili,DIRECT
+  - GEOSITE,github,Proxy
+  - GEOSITE,spotify,Spotify
+  - GEOSITE,google,Proxy
+  # 其它
+  - MATCH,Final

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
+  "disabled_agents": [],
+  "autoUpdate": false,
+  "preset": "default",
+  "presets": {
+    "default": {
+      "orchestrator": {
+        "model": "rightcode/gpt-5.5",
+        "variant": "high",
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": "volcengine-plan/glm-5.1",
+        "variant": "max",
+        "skills": [
+          "simplify",
+          "code-review-and-quality",
+          "api-and-interface-design"
+        ],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "volcengine-plan/minimax-m3",
+        "variant": "medium",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "explorer": {
+        "model": "volcengine-plan/minimax-m3",
+        "variant": "medium",
+        "skills": ["codemap", "clonedeps", "source-driven-development"],
+        "mcps": []
+      },
+      "designer": {
+        "model": "kimi-for-coding/k2p7",
+        "variant": "medium",
+        "skills": ["browser-testing-with-devtools", "frontend-ui-engineering"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "kimi-for-coding/k2p7",
+        "variant": "high",
+        "skills": [
+          "clean-code",
+          "incremental-implementation",
+          "debugging-and-error-recovery",
+          "test-driven-development"
+        ],
+        "mcps": []
+      },
+      "observer": {
+        "model": "kimi-for-coding/k2p6"
+      }
+    }
+  },
+  "council": {
+    "default_preset": "default",
+    "master": { "model": "kimi-for-coding/k2p7" },
+    "presets": {
+      "default": {
+        "alpha": { "model": "volcengine-plan/minimax-m3" },
+        "beta": { "model": "volcengine-plan/glm-5.1" },
+        "gamma": { "model": "deepseek/deepseek-v4-pro", "variant": "max" }
+      }
+    }
+  },
+  "todoContinuation": {
+    "autoEnable": true,
+    "autoEnableThreshold": 4,
+    "maxContinuations": 50,
+    "cooldownMs": 3000
+  }
+}
