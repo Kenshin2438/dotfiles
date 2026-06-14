@@ -6,19 +6,14 @@
   "presets": {
     "default": {
       "orchestrator": {
-        "model": "rightcode/gpt-5.5",
-        "variant": "high",
+        "model": "volcengine-plan/glm-5.1",
         "skills": ["*"],
         "mcps": ["*", "!context7"]
       },
       "oracle": {
         "model": "volcengine-plan/glm-5.1",
         "variant": "max",
-        "skills": [
-          "simplify",
-          "code-review-and-quality",
-          "api-and-interface-design"
-        ],
+        "skills": ["simplify", "code-review-and-quality", "api-and-interface-design"],
         "mcps": []
       },
       "librarian": {
@@ -40,14 +35,9 @@
         "mcps": []
       },
       "fixer": {
-        "model": "kimi-for-coding/k2p7",
+        "model": "volcengine-plan/glm-5.1",
         "variant": "high",
-        "skills": [
-          "clean-code",
-          "incremental-implementation",
-          "debugging-and-error-recovery",
-          "test-driven-development"
-        ],
+        "skills": ["clean-code", "incremental-implementation", "debugging-and-error-recovery", "test-driven-development"],
         "mcps": []
       },
       "observer": {
@@ -62,7 +52,7 @@
       "default": {
         "alpha": { "model": "volcengine-plan/minimax-m3" },
         "beta": { "model": "volcengine-plan/glm-5.1" },
-        "gamma": { "model": "deepseek/deepseek-v4-pro", "variant": "max" }
+        "gamma": { "model": "volcengine-plan/deepseek-v4-pro", "variant": "max" }
       }
     }
   },

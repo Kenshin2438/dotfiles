@@ -11,3 +11,7 @@
 ^/COPYING
 
 docs
+
+## Windows Configuration only
+AppData
+Documents

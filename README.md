@@ -1,43 +1,13 @@
-My `dotfiles` for [Arch]Linux (Hyprland) and Windows 11.
+## My `dotfiles`
 
 **_Important: use at your own risk. Test with dummy files before use it with your real dotfiles._**
 
 ---
 
-```
-kenshin@mechrevo
-----------------
-OS: Arch Linux x86_64
-Host: yilong15 Pro Series GM5HG7A
-Kernel: Linux 7.0.5-zen1-1-1-zen
-CPU: AMD Ryzen 7 8845H (16) @ 5.10 GHz
-GPU 1: NVIDIA GeForce RTX 4070 Max-Q / Mobile [Discrete]
-GPU 2: AMD Radeon 780M Graphics [Integrated]
-```
-
-### Dependency
-
-[Reddit r/hyprland | What applications do you use for basic stuff? ](https://www.reddit.com/r/hyprland/comments/1bl735k/what_applications_do_you_use_for_basic_stuff/)
-
-- Terminal: `kitty`
-- Shell: `fish`
-- Window Manager: `hyprland`
-  - Hypr Ecosystem(hypr\* projects): `hyprlock`, `hypridle`
-- Theme:
-  - QT: [Kvantum catppuccin-frappe](https://github.com/catppuccin/Kvantum)
-  - GTK[2/3/4]: `adw-gtk3`
-  - Icon: `papirus-icon-theme`
-  - Cursor: `bibata-cursor-theme`
-  - Shell Prompt: `starship`
-- File Explorer: `nautilus [gnome]`
-- Document Viewer: `evince [gnome]`
-- Music Player: `spotify-launcher`
-- Editor: `neovide(neovim)`, `code`, `zed`
-
-### Enabling Configurations (Linux)
+### Enabling Configurations (Linux or MacOS)
 
 ```
-cd $HOME/
+cd $HOME
 git clone git@github.com:Kenshin2438/dotfiles.git
 cd dotfiles
 stow .
@@ -47,9 +17,17 @@ matugen image $HOME/wallpapers/{IMAGE}
 ### Enabling Configurations (Windows)
 
 ```powershell
-.\setup.ps1 -WhatIf
+cd $HOME
+git clone git@github.com:Kenshin2438/dotfiles.git
+cd dotfiles
+
+New-Item -ItemType SymbolicLink $HOME\.config\starship.toml -Target "$HOME\dotfiles\.config\starship.toml"
+New-Item -ItemType SymbolicLink $PROFILE -Target "$HOME\dotfiles\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+. $PROFILE # refresh powershell config
+
+New-Item -ItemType SymbolicLink $HOME\.config\mihomo   -Target "$HOME\dotfiles\.config\mihomo"
+New-Item -ItemType SymbolicLink $HOME\.config\opencode -Target "$HOME\dotfiles\.config\opencode"
+New-Item -ItemType SymbolicLink $HOME\.config\wezterm  -Target "$HOME\dotfiles\.config\wezterm"
+New-Item -ItemType SymbolicLink $env:LOCALAPPDATA\nvim -Target "$HOME\dotfiles\AppData\Local\nvim"
+New-Item -ItemType SymbolicLink $env:APPDATA\alacritty -Target "$HOME\dotfiles\AppData\Roaming\alacritty"
 ```
-
-### opencode
-
-- RefLink https://github.com/bpinheiroms/dotfiles
