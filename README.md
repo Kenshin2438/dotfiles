@@ -30,4 +30,5 @@ New-Item -ItemType SymbolicLink $HOME\.config\opencode -Target "$HOME\dotfiles\.
 New-Item -ItemType SymbolicLink $HOME\.config\wezterm  -Target "$HOME\dotfiles\.config\wezterm"
 New-Item -ItemType SymbolicLink $env:LOCALAPPDATA\nvim -Target "$HOME\dotfiles\AppData\Local\nvim"
 New-Item -ItemType SymbolicLink $env:APPDATA\alacritty -Target "$HOME\dotfiles\AppData\Roaming\alacritty"
+New-Item -ItemType SymbolicLink $env:APPDATA\VSCodium  -Target "$HOME\dotfiles\AppData\Roaming\VSCodium"
 ```

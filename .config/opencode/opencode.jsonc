@@ -31,19 +31,9 @@
         "baseURL": "https://ark.cn-beijing.volces.com/api/coding/v3",
       },
       "models": {
-        "glm-5.1": {
-          "name": "GLM 5.1",
-          "limit": { "context": 200000, "output": 4096 },
-          "modalities": { "input": ["text"], "output": ["text"] },
-        },
-        "minimax-m3": {
-          "name": "Minimax M3",
-          "limit": { "context": 512000, "output": 4096 },
-          "modalities": { "input": ["text", "image"], "output": ["text"] },
-        },
-        "minimax-m2.7": {
-          "name": "Minimax M2.7",
-          "limit": { "context": 200000, "output": 4096 },
+        "glm-5.2": {
+          "name": "GLM 5.2",
+          "limit": { "context": 1024000, "output": 4096 },
           "modalities": { "input": ["text"], "output": ["text"] },
         },
         "deepseek-v4-flash": {
