@@ -6,52 +6,52 @@
   "presets": {
     "default": {
       "orchestrator": {
-        "model": "volcengine-plan/glm-5.2",
+        "model": "opencode-go/glm-5.2",
         "skills": ["*"],
         "mcps": ["*", "!context7"]
       },
       "oracle": {
-        "model": "volcengine-plan/kimi-k2.6",
+        "model": "rightcode/gpt-5.5",
         "variant": "high",
         "skills": ["simplify", "code-review-and-quality", "api-and-interface-design"],
         "mcps": []
       },
       "librarian": {
-        "model": "volcengine-plan/deepseek-v4-pro",
+        "model": "kimi-for-coding/k2p6",
         "variant": "medium",
         "skills": [],
         "mcps": ["websearch", "context7", "grep_app"]
       },
       "explorer": {
-        "model": "volcengine-plan/deepseek-v4-flash",
+        "model": "kimi-for-coding/k2p6",
         "variant": "medium",
         "skills": ["codemap", "clonedeps", "source-driven-development"],
         "mcps": []
       },
       "designer": {
-        "model": "volcengine-plan/kimi-k2.6",
-        "variant": "medium",
+        "model": "kimi-for-coding/k2p7",
+        "variant": "high",
         "skills": ["browser-testing-with-devtools", "frontend-ui-engineering"],
         "mcps": []
       },
       "fixer": {
-        "model": "volcengine-plan/glm-5.2",
-        "variant": "high",
+        "model": "kimi-for-coding/k2p7",
+        "variant": "medium",
         "skills": ["clean-code", "incremental-implementation", "debugging-and-error-recovery", "test-driven-development"],
         "mcps": []
       },
       "observer": {
-        "model": "volcengine-plan/kimi-k2.6"
+        "model": "opencode-go/kimi-k2.6"
       }
     }
   },
   "council": {
     "default_preset": "default",
-    "master": { "model": "volcengine-plan/glm-5.2" },
+    "master": { "model": "opencode-go/glm-5.2" },
     "presets": {
       "default": {
-        "beta": { "model": "volcengine-plan/kimi-k2.6" },
-        "gamma": { "model": "volcengine-plan/deepseek-v4-pro", "variant": "max" }
+        "beta": { "model": "opencode-go/kimi-k2.6" },
+        "gamma": { "model": "opencode-go/deepseek-v4-pro", "variant": "max" }
       }
     }
   },

@@ -24,32 +24,5 @@
         },
       },
     },
-    "volcengine-plan": {
-      "name": "Volcano Engine",
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
-        "baseURL": "https://ark.cn-beijing.volces.com/api/coding/v3",
-      },
-      "models": {
-        "glm-5.2": {
-          "name": "GLM 5.2",
-          "limit": { "context": 1024000, "output": 4096 },
-          "modalities": { "input": ["text"], "output": ["text"] },
-        },
-        "deepseek-v4-flash": {
-          "name": "DeepSeek V4 flash",
-          "limit": { "context": 1024000, "output": 4096 },
-        },
-        "deepseek-v4-pro": {
-          "name": "DeepSeek V4 pro",
-          "limit": { "context": 1024000, "output": 4096 },
-        },
-        "kimi-k2.6": {
-          "name": "Kimi K2.6",
-          "limit": { "context": 256000, "output": 4096 },
-          "modalities": { "input": ["text", "image"], "output": ["text"] },
-        },
-      },
-    },
   },
 }
