@@ -1,5 +1,8 @@
 {
   "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
+  "companion": {
+    "enabled": true
+  },
   "disabled_agents": [],
   "autoUpdate": false,
   "preset": "default",
@@ -13,7 +16,7 @@
       "oracle": {
         "model": "rightcode/gpt-5.5",
         "variant": "high",
-        "skills": ["simplify", "code-review-and-quality", "api-and-interface-design"],
+        "skills": ["simplify", "code-review", "codebase-design"],
         "mcps": []
       },
       "librarian": {
@@ -25,23 +28,23 @@
       "explorer": {
         "model": "kimi-for-coding/k2p6",
         "variant": "medium",
-        "skills": ["codemap", "clonedeps", "source-driven-development"],
+        "skills": ["codemap", "clonedeps", "research"],
         "mcps": []
       },
       "designer": {
         "model": "kimi-for-coding/k2p7",
         "variant": "high",
-        "skills": ["browser-testing-with-devtools", "frontend-ui-engineering"],
+        "skills": ["prototype"],
         "mcps": []
       },
       "fixer": {
         "model": "kimi-for-coding/k2p7",
         "variant": "medium",
-        "skills": ["clean-code", "incremental-implementation", "debugging-and-error-recovery", "test-driven-development"],
+        "skills": ["code-review", "implement", "diagnosing-bugs", "tdd"],
         "mcps": []
       },
       "observer": {
-        "model": "opencode-go/kimi-k2.6"
+        "model": "kimi-for-coding/k2p6"
       }
     }
   },

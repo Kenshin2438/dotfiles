@@ -8,17 +8,33 @@
 Documents/PowerShell/**
 !Documents/PowerShell/Microsoft.PowerShell_profile.ps1
 
-## Agents
-.agents/
+## VSCodium
+AppData/Roaming/VSCodium/**
+!AppData/Roaming/VSCodium/User/settings.json
 
-## Linux
+## Agents
+.agents/**
+!.agents/.skill-lock.json
+
+## Editor
 .zed/
 .vscode/
 
+## Hyprland
 .config/hypr/workspaces.conf
 .config/hypr/monitors.conf
 
+## Matugen
 .config/fuzzel/matugen.ini
 .config/hypr/conf/matugen.conf
 .config/kitty/matugen.conf
 .config/fish/themes/matugen.theme
+
+## Opencode
+.config/opencode/
+!.config/opencode/skills/
+!.config/opencode/AGENTS.md
+!.config/opencode/opencode.jsonc
+!.config/opencode/tui.json
+!.config/opencode/dcp.jsonc
+!.config/opencode/oh-my-opencode-slim.json

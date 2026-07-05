@@ -1,14 +1,22 @@
 {
-  "proxy": "http://127.0.0.1:7890",
-  "project_panel": {
-    "dock": "left",
+  "agent_servers": {
+    "Kimi Code CLI": {
+      "default_config_options": {
+        "mode": "yolo"
+      },
+      "type": "custom",
+      "command": "kimi",
+      "args": ["acp"],
+      "env": {},
+    },
   },
+  "icon_theme": "Material Icon Theme",
+  "proxy": "http://127.0.0.1:7890",
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
     "dark": "Ayu Mirage",
   },
-  "disable_ai": true,
   "base_keymap": "VSCode",
   "autosave": "on_focus_change",
   "show_whitespaces": "all",
