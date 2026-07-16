@@ -1,6 +1,6 @@
 ## Mihomo
 .config/mihomo/**
-!.config/mihomo/config.yaml.tmpl
+!.config/mihomo/config.template.yaml
 !.config/mihomo/build-config.ps1
 !.config/mihomo/MihomoLauncher.ps1
 
@@ -38,3 +38,6 @@ AppData/Roaming/VSCodium/**
 !.config/opencode/tui.json
 !.config/opencode/dcp.jsonc
 !.config/opencode/oh-my-opencode-slim.json
+
+## NuShell
+AppData/Roaming/nushell/history.txt

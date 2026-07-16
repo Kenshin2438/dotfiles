@@ -1,12 +1,12 @@
 mixed-port: 7890
-ipv6: false
+ipv6: true
 allow-lan: false
 mode: rule
 log-level: info
 unified-delay: true
 tcp-concurrent: true
 find-process-mode: strict
-global-client-fingerprint: chrome
+global-ua: clash.meta
 
 profile:
   store-selected: true
@@ -14,26 +14,26 @@ profile:
 
 external-controller: 127.0.0.1:9090
 external-ui: metacubexd
-external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 
 geodata-mode: true
 geodata-loader: standard
 geox-url:
-  geoip: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip-lite.dat'
-  geosite: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
-  mmdb: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country-lite.mmdb'
+  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip-lite.dat"
+  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country-lite.mmdb"
 geo-auto-update: true
-geo-update-interval: 48
+geo-update-interval: 24
 
 proxy-providers:
   PROVIDER:
     type: http
-    url: '__PROVIDER_URL__'
+    url: "__PROVIDER_URL__"
     interval: 86400
     proxy: DIRECT
     health-check:
       enable: true
-      url: 'https://www.gstatic.com/generate_204'
+      url: "https://www.gstatic.com/generate_204"
       interval: 300
       lazy: true
       expected-status: 204
@@ -41,13 +41,13 @@ proxy-providers:
 dns:
   enable: true
   cache-algorithm: arc
-  ipv6: false
+  ipv6: true
   listen: 127.0.0.1:1053
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter:
-    - 'geosite:private'
-    - 'geosite:cn'
+    - "geosite:private"
+    - "geosite:cn"
   nameserver:
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
@@ -97,11 +97,11 @@ proxy-groups:
   - { name: Final, type: select, proxies: [DIRECT, Proxy] }
   - { name: Spotify, type: select, proxies: [香港, 美国, 新加坡, 其它地区] }
   - { name: AI, type: select, proxies: [香港, 美国, 新加坡, 其它地区] }
-  - { name: '全部节点', type: select, include-all: true, exclude-type: direct }
-  - { name: '香港', type: url-test, include-all: true, filter: '(?i)香港' }
-  - { name: '美国', type: url-test, include-all: true, filter: '(?i)美国' }
-  - { name: '新加坡', type: url-test, include-all: true, filter: '(?i)新加坡' }
-  - { name: '其它地区', type: url-test, include-all: true, filter: '(?i)^(?!.*(?:香港|新加坡|美国)).*' }
+  - { name: 全部节点, type: select, include-all: true, exclude-type: direct }
+  - { name: 香港, type: url-test, include-all: true, filter: "(?i)香港" }
+  - { name: 美国, type: url-test, include-all: true, filter: "(?i)美国" }
+  - { name: 新加坡, type: url-test, include-all: true, filter: "(?i)新加坡" }
+  - { name: 其它地区, type: url-test, include-all: true, filter: "(?i)^(?!.*(?:香港|新加坡|美国)).*" }
 
 rules:
   # 阻断

@@ -17,3 +17,21 @@
 ## Project Structure
 
 - Make sure `git status` shows no garbage files; update `.gitignore` accordingly
+
+## Prefer Direct Reasoning Over Workflow Rituals
+
+Do not automatically invoke installed skills, workflows, or planning procedures when a task is already sufficiently specified or can be resolved by inspecting the current project context.
+
+Before using any skill or workflow:
+
+- First analyze the user's request and the available repository/project state.
+- Prefer reading existing code, configuration, documentation, and local context to understand the problem.
+- Use additional workflows only when they provide clear value beyond what can be achieved directly.
+
+Avoid:
+
+- Adding unnecessary planning phases for small, well-defined changes.
+- Creating artificial checkpoints or summaries just to satisfy a workflow.
+- Delegating simple reasoning or inspection tasks to a skill when direct execution is clearer and faster.
+
+The goal is to minimize ceremony while preserving correctness, maintainability, and safety.

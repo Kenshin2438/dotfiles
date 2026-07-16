@@ -1,5 +1,5 @@
 param (
-    [string]$Template = "config.yaml.tmpl",
+    [string]$Template = "config.template.yaml",
     [string]$Output   = "config.yaml",
     [switch]$buildMihomoLauncher
 )

@@ -34,4 +34,5 @@ New-Item -ItemType SymbolicLink $env:LOCALAPPDATA\nvim -Target "$HOME\dotfiles\A
 New-Item -ItemType SymbolicLink $env:APPDATA\alacritty -Target "$HOME\dotfiles\AppData\Roaming\alacritty"
 New-Item -ItemType SymbolicLink $env:APPDATA\VSCodium  -Target "$HOME\dotfiles\AppData\Roaming\VSCodium"
 New-Item -ItemType SymbolicLink $env:APPDATA\Zed       -Target "$HOME\dotfiles\AppData\Roaming\Zed"
+New-Item -ItemType SymbolicLink $env:APPDATA\nushell   -Target "$HOME\dotfiles\AppData\Roaming\nushell"
 ```

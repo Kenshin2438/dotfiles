@@ -1,8 +1,5 @@
 {
   "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
-  "companion": {
-    "enabled": true
-  },
   "disabled_agents": [],
   "autoUpdate": false,
   "preset": "default",
@@ -10,51 +7,35 @@
     "default": {
       "orchestrator": {
         "model": "opencode-go/glm-5.2",
+        "variant": "max",
         "skills": ["*"],
         "mcps": ["*", "!context7"]
       },
       "oracle": {
-        "model": "rightcode/gpt-5.5",
-        "variant": "high",
-        "skills": ["simplify", "code-review", "codebase-design"],
-        "mcps": []
+        "model": "opencode-go/qwen3.7-max",
+        "variant": "max",
+        "skills": ["simplify"]
       },
       "librarian": {
-        "model": "kimi-for-coding/k2p6",
-        "variant": "medium",
-        "skills": [],
-        "mcps": ["websearch", "context7", "grep_app"]
+        "model": "opencode-go/deepseek-v4-flash",
+        "variant": "high",
+        "mcps": ["websearch", "context7", "gh_grep"]
       },
       "explorer": {
-        "model": "kimi-for-coding/k2p6",
-        "variant": "medium",
-        "skills": ["codemap", "clonedeps", "research"],
-        "mcps": []
+        "model": "opencode-go/deepseek-v4-flash",
+        "variant": "max"
       },
       "designer": {
         "model": "kimi-for-coding/k2p7",
-        "variant": "high",
-        "skills": ["prototype"],
-        "mcps": []
+        "variant": "medium"
       },
       "fixer": {
         "model": "kimi-for-coding/k2p7",
-        "variant": "medium",
-        "skills": ["code-review", "implement", "diagnosing-bugs", "tdd"],
-        "mcps": []
+        "variant": "low"
       },
       "observer": {
-        "model": "kimi-for-coding/k2p6"
-      }
-    }
-  },
-  "council": {
-    "default_preset": "default",
-    "master": { "model": "opencode-go/glm-5.2" },
-    "presets": {
-      "default": {
-        "beta": { "model": "opencode-go/kimi-k2.6" },
-        "gamma": { "model": "opencode-go/deepseek-v4-pro", "variant": "max" }
+        "model": "kimi-for-coding/k2p6",
+        "variant": "max"
       }
     }
   },
