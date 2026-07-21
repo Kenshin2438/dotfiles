@@ -26,15 +26,15 @@
         "variant": "max"
       },
       "designer": {
-        "model": "kimi-for-coding/k2p7",
-        "variant": "medium"
+        "model": "opencode-go/kimi-k3",
+        "variant": "high"
       },
       "fixer": {
-        "model": "kimi-for-coding/k2p7",
-        "variant": "low"
+        "model": "opencode-go/glm-5.2",
+        "variant": "high"
       },
       "observer": {
-        "model": "kimi-for-coding/k2p6",
+        "model": "opencode-go/mimo-v2.5",
         "variant": "max"
       }
     }
