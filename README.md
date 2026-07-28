@@ -4,35 +4,26 @@
 
 ---
 
-### Enabling Configurations (Linux or MacOS)
+### Enabling Configurations
 
-```
+Requires [just](https://github.com/casey/just). Each platform recipe creates
+symlinks for the configs that apply to it; if a target path already exists,
+`just` prints a warning and leaves it untouched instead of removing it.
+
+```shell
 cd $HOME
 git clone git@github.com:Kenshin2438/dotfiles.git
 cd dotfiles
-stow .
+
+just            # list available recipes
+just macos      # macOS
+just archlinux  # Arch Linux (full desktop, incl. the Hyprland stack)
+just wsl        # WSL (CLI tools only)
+just windows    # Windows (pwsh; symlinks need admin rights or Developer Mode)
+```
+
+On Arch Linux, regenerate themes after linking:
+
+```shell
 matugen image $HOME/wallpapers/{IMAGE}
-```
-
-### Enabling Configurations (Windows)
-
-```powershell
-cd $HOME
-git clone git@github.com:Kenshin2438/dotfiles.git
-cd dotfiles
-
-New-Item -ItemType SymbolicLink $HOME\.config\starship.toml -Target "$HOME\dotfiles\.config\starship.toml"
-New-Item -ItemType SymbolicLink $PROFILE -Target "$HOME\dotfiles\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
-. $PROFILE # refresh powershell config
-
-New-Item -ItemType SymbolicLink $HOME\.config\mihomo   -Target "$HOME\dotfiles\.config\mihomo"
-New-Item -ItemType SymbolicLink $HOME\.config\opencode -Target "$HOME\dotfiles\.config\opencode"
-New-Item -ItemType SymbolicLink $HOME\.config\wezterm  -Target "$HOME\dotfiles\.config\wezterm"
-
-New-Item -ItemType SymbolicLink $env:LOCALAPPDATA\nvim -Target "$HOME\dotfiles\AppData\Local\nvim"
-
-New-Item -ItemType SymbolicLink $env:APPDATA\alacritty -Target "$HOME\dotfiles\AppData\Roaming\alacritty"
-New-Item -ItemType SymbolicLink $env:APPDATA\VSCodium  -Target "$HOME\dotfiles\AppData\Roaming\VSCodium"
-New-Item -ItemType SymbolicLink $env:APPDATA\Zed       -Target "$HOME\dotfiles\AppData\Roaming\Zed"
-New-Item -ItemType SymbolicLink $env:APPDATA\nushell   -Target "$HOME\dotfiles\AppData\Roaming\nushell"
 ```
