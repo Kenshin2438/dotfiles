@@ -5,7 +5,7 @@ return {
     cmd = "ToggleTerm",
     opts = {
       open_mapping = [[<c-\>]],
-      shell = "fish",
+      shell = "nu",
       direction = "float",
       shade_terminals = false,
       float_opts = {
