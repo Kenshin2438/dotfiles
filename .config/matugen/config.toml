@@ -11,11 +11,6 @@ set = true
 input_path = './templates/fuzzel.ini'
 output_path = '~/.config/fuzzel/matugen.ini'
 
-[templates.hyprland]
-input_path = './templates/hyprland.conf'
-output_path = '~/.config/hypr/conf/matugen.conf'
-post_hook = 'hyprctl reload'
-
 [templates.kitty]
 input_path = './templates/kitty.conf'
 output_path = '~/.config/kitty/matugen.conf'
@@ -28,9 +23,3 @@ output_path = '~/.config/gtk-3.0/colors.css'
 [templates.gtk4]
 input_path = './templates/gtk.css'
 output_path = '~/.config/gtk-4.0/colors.css'
-
-# fork from https://github.com/acdcbyl/Dotfiles-arch.git
-[templates.fish]
-input_path = './templates/fish.theme'
-output_path = '~/.config/fish/themes/matugen.theme'
-post_hook = 'fish -c "fish_config theme choose matugen"'

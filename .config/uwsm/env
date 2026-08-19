@@ -12,8 +12,9 @@ export CLUTTER_BACKEND="wayland"
 export ELECTRON_OZONE_PLATFORM_HINT="auto"
 
 # Cursor
-export XCURSOR_THEME="Bibata-Modern-Ice"
+# export XCURSOR_THEME="Bibata-Modern-Ice"
 export XCURSOR_SIZE=24
+export HYPRCURSOR_SIZE=24
 
 # QT
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
