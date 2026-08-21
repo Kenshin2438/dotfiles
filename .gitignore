@@ -24,5 +24,9 @@ AppData/Roaming/VSCodium/**
 .config/fuzzel/matugen.ini
 .config/kitty/matugen.conf
 
+## Neovim
+# Per-machine plugin lock; each platform manages its own versions
+.config/nvim/lazy-lock.json
+
 ## NuShell
 .config/nushell/history.txt
