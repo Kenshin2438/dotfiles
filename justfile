@@ -16,12 +16,17 @@ default:
 # Link configs on macOS
 [macos]
 macos: \
-  (link dotfiles/".config/nvim" config/"nvim") \
-  (link dotfiles/".config/zed" config/"zed") \
+  (link dotfiles/".zshenv"                        home/".zshenv") \
+  (link dotfiles/".config/nushell"                config/"nushell") \
+  (link dotfiles/".config/nvim"                   config/"nvim") \
+  (link dotfiles/".config/zed"                    config/"zed") \
+  (link dotfiles/".config/zsh"                    config/"zsh") \
+  (link dotfiles/".config/starship.toml"          config/"starship.toml") \
 
 # Link configs on Arch Linux (full desktop, incl. the Hyprland stack)
 [linux]
 archlinux: \
+  (link dotfiles/".zshenv"                        home/".zshenv") \
   (link dotfiles/"wallpapers"                     home/"wallpapers") \
   (link dotfiles/".agents"                        home/".agents") \
   (link dotfiles/".config/fontconfig"             config/"fontconfig") \
