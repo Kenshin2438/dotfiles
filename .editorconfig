@@ -8,8 +8,11 @@ indent_style = space
 indent_size = 2
 max_line_length = 144
 
-[*.{fish,zprofile,zshrc}]
+[*.{zprofile,zshrc,zshenv}]
 indent_size = 4
 
 [*.ps1]
+indent_size = 4
+
+[*.qml]
 indent_size = 4
