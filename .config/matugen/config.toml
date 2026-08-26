@@ -1,25 +1,27 @@
 [config]
 reload_apps = true
 
-[config.wallpaper]
-command = "hyprctl"
-arguments = ["hyprpaper", "wallpaper", ","]
-set = true
+[templates.wallpaper]
+input_path = './templates/wallpaper.txt'
+output_path = '~/.local/state/quickshell/user/generated/wallpaper.txt'
+
+[templates.m3colors]
+input_path = './templates/colors.json'
+output_path = '~/.local/state/quickshell/user/generated/colors.json'
 
 ## Templates
 [templates.fuzzel]
-input_path = './templates/fuzzel.ini'
+input_path = './templates/fuzzel/matugen.ini'
 output_path = '~/.config/fuzzel/matugen.ini'
 
 [templates.kitty]
-input_path = './templates/kitty.conf'
+input_path = './templates/kitty/matugen.conf'
 output_path = '~/.config/kitty/matugen.conf'
 
-# GTK
 [templates.gtk3]
-input_path = './templates/gtk.css'
-output_path = '~/.config/gtk-3.0/colors.css'
+input_path = './templates/gtk-3.0/gtk.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
 
 [templates.gtk4]
-input_path = './templates/gtk.css'
-output_path = '~/.config/gtk-4.0/colors.css'
+input_path = './templates/gtk-4.0/gtk.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
