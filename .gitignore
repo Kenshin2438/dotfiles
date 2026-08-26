@@ -7,13 +7,9 @@
 !.config/mihomo/build-config.ps1
 !.config/mihomo/MihomoLauncher.ps1
 
-## PowerShell
-Documents/PowerShell/**
-!Documents/PowerShell/Microsoft.PowerShell_profile.ps1
-
 ## VSCodium
-AppData/Roaming/VSCodium/**
-!AppData/Roaming/VSCodium/User/settings.json
+.config/VSCodium/**
+!.config/VSCodium/User/settings.json
 
 ## Hyprland
 .config/hypr/workspaces.conf

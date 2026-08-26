@@ -51,7 +51,11 @@ wsl:
 
 # Link configs on Windows
 [windows]
-windows:
+windows: \
+  (link dotfiles/".config/nushell"    home/"AppData/Roaming/nushell") \
+  (link dotfiles/".config/nvim"       home/"AppData/Local/nvim") \
+  (link dotfiles/".config/zed"        home/"AppData/Roaming/Zed") \
+  (link dotfiles/".config/powershell/Microsoft.PowerShell_profile.ps1" home/"Documents/PowerShell/Microsoft.PowerShell_profile.ps1") \
 
 # Symlink SRC to DST; if DST exists, warn instead of removing it
 [private, unix]
