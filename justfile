@@ -52,9 +52,13 @@ wsl:
 # Link configs on Windows
 [windows]
 windows: \
-  (link dotfiles/".config/nushell"    home/"AppData/Roaming/nushell") \
-  (link dotfiles/".config/nvim"       home/"AppData/Local/nvim") \
-  (link dotfiles/".config/zed"        home/"AppData/Roaming/Zed") \
+  (link dotfiles/".config/mihomo"                 config/"mihomo") \
+  (link dotfiles/".config/wezterm"                config/"wezterm") \
+  (link dotfiles/".config/starship.toml"          config/"starship.toml") \
+  (link dotfiles/".config/nvim"                   env("LOCALAPPDATA")/"nvim") \
+  (link dotfiles/".config/nushell"                env("APPDATA")/"nushell") \
+  (link dotfiles/".config/zed"                    env("APPDATA")/"Zed") \
+  (link dotfiles/".config/VSCodium"               env("APPDATA")/"VSCodium") \
   (link dotfiles/".config/powershell/Microsoft.PowerShell_profile.ps1" home/"Documents/PowerShell/Microsoft.PowerShell_profile.ps1") \
 
 # Symlink SRC to DST; if DST exists, warn instead of removing it
