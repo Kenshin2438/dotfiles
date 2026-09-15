@@ -25,8 +25,8 @@ config.show_new_tab_button_in_tab_bar = false
 
 --- Theming ---
 config.color_scheme = "Ayu Mirage"
--- config.window_background_opacity = 0.95
--- config.win32_system_backdrop = "Acrylic"
+config.window_background_opacity = 0.8
+config.win32_system_backdrop = "Acrylic"
 config.window_frame = { font = config.font }
 
 --- Launcher ---
