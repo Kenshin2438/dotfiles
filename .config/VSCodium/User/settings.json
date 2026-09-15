@@ -1,0 +1,64 @@
+{
+  "http.proxy": "http://127.0.0.1:7890",
+  "window.autoDetectColorScheme": true,
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.experimental.fontFamily": "'Monaco', 'FiraPlexCode Nerd Font', 'LXGW WenKai Mono'",
+  "files.autoSave": "onFocusChange",
+  "editor.fontFamily": "'Monaco', 'FiraPlexCode Nerd Font', 'LXGW WenKai Mono'",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.renderWhitespace": "all",
+  "terminal.integrated.fontFamily": "'FiraPlexCode Nerd Font', 'LXGW WenKai Mono'",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe",
+      ],
+      "args": [],
+      "icon": "terminal-cmd",
+    },
+    "Git Bash": {
+      "source": "Git Bash",
+      "icon": "terminal-git-bash",
+    },
+    "PowerShell Core": {
+      "path": "D:\\Software\\Scoop\\shims\\pwsh.exe",
+    },
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell Core",
+  "json.schemaDownload.trustedDomains": {
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://json-schema.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://models.dev": true,
+    "https://opencode.ai": true,
+    "https://raw.githubusercontent.com": true,
+    "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://unpkg.com": true,
+    "https://www.schemastore.org/": true,
+  },
+  "markdown-preview-enhanced.previewColorScheme": "editorColorScheme",
+  "ets.sdkPath": "/Users/kenshin/Huawei/command-line-tools/sdk/default/openharmony",
+  "git.autofetch": true,
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+  },
+  "redhat.telemetry.enabled": true,
+  "[ets]": {
+    "editor.defaultFormatter": "NailyZero.vscode-naily-ets",
+  },
+  "[just]": {
+    "editor.defaultFormatter": "nefrob.vscode-just-syntax",
+  },
+  "git.blame.editorDecoration.enabled": true,
+}

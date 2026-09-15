@@ -9,6 +9,8 @@
 
 ## VSCodium
 .config/VSCodium/**
+!.config/VSCodium/User/
+.config/VSCodium/User/*
 !.config/VSCodium/User/settings.json
 
 ## Hyprland
