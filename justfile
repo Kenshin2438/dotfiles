@@ -59,6 +59,7 @@ windows: \
   (link dotfiles/".config/nushell"                env("APPDATA")/"nushell") \
   (link dotfiles/".config/zed"                    env("APPDATA")/"Zed") \
   (link dotfiles/".config/VSCodium"               env("APPDATA")/"VSCodium") \
+  (link dotfiles/".config/spicetify"              env("APPDATA")/"spicetify") \
   (link dotfiles/".config/powershell/Microsoft.PowerShell_profile.ps1" home/"Documents/PowerShell/Microsoft.PowerShell_profile.ps1") \
 
 # Symlink SRC to DST; if DST exists, warn instead of removing it
