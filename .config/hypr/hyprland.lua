@@ -82,32 +82,6 @@ hl.window_rule({
   no_focus = true,
 })
 
--- Layer rules also return a handle.
-local overlayLayerRule = hl.layer_rule({
-  name = "no-anim-overlay",
-  match = { namespace = "^my-overlay$" },
-  no_anim = true,
-})
--- overlayLayerRule:set_enabled(false)
-
--- Hyprland-run windowrule
-hl.window_rule({
-  name = "move-hyprland-run",
-  match = { class = "hyprland-run" },
-
-  move = "20 monitor_h-120",
-  float = true,
-})
-
--- Custom Apps
-hl.window_rule({
-  name = "linuxqq",
-  match = {
-    class = "^([Qq][Qq])$",
-  },
-  float = true,
-})
-
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
   general = {
@@ -179,10 +153,6 @@ hl.config({
   },
 })
 
-----------------
-----  MISC  ----
-----------------
-
 hl.config({
   misc = {
     force_default_wallpaper = 0, -- Set to 0 or 1 to disable the anime mascot wallpapers
@@ -227,9 +197,6 @@ hl.device({
   sensitivity = -0.5,
 })
 
----------------------
----- KEYBINDINGS ----
----------------------
 -- Application shortcuts
 local terminal = "kitty"
 hl.bind("SUPER + T", hl.dsp.exec_cmd(terminal))
