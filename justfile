@@ -37,6 +37,7 @@ archlinux: \
   (link dotfiles/".config/nushell"                config/"nushell") \
   (link dotfiles/".config/nvim"                   config/"nvim") \
   (link dotfiles/".config/quickshell"             config/"quickshell") \
+  (link dotfiles/".config/spicetify"              config/"spicetify") \
   (link dotfiles/".config/uwsm"                   config/"uwsm") \
   (link dotfiles/".config/zed"                    config/"zed") \
   (link dotfiles/".config/zsh"                    config/"zsh") \
