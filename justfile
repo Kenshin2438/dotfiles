@@ -19,6 +19,7 @@ macos: \
   (link dotfiles/".zshenv"                        home/".zshenv") \
   (link dotfiles/".config/nushell"                config/"nushell") \
   (link dotfiles/".config/nvim"                   config/"nvim") \
+  (link dotfiles/".config/VSCodium"               home/"Library/Application Support/VSCodium") \
   (link dotfiles/".config/zed"                    config/"zed") \
   (link dotfiles/".config/zsh"                    config/"zsh") \
   (link dotfiles/".config/starship.toml"          config/"starship.toml") \

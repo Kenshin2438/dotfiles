@@ -10,7 +10,7 @@
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderWhitespace": "all",
-  "terminal.integrated.fontFamily": "'FiraPlexCode Nerd Font', 'LXGW WenKai Mono'",
+  "terminal.integrated.fontFamily": "'FiraPlexCode Nerd Font', 'Monaco', 'LXGW WenKai Mono'",
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
