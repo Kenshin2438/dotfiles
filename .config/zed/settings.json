@@ -1,4 +1,7 @@
 {
+  "outline_panel": {
+    "dock": "left"
+  },
   "ssh_connections": [
     {
       "host": "mac-mini-m4",
@@ -34,7 +37,7 @@
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Ayu Dark",
+    "dark": "Ayu Mirage",
   },
   "base_keymap": "VSCode",
   "autosave": "on_focus_change",
