@@ -45,6 +45,7 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 -- uncomment all if you wish to use that.
 hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
 hl.workspace_rule({ workspace = "f[1]", gaps_out = 0, gaps_in = 0 })
+hl.workspace_rule({ workspace = "s[true]", layout_opts = { special_scale_factor = 0.85 } })
 hl.window_rule({
   name = "no-gaps-wtv1",
   match = { float = false, workspace = "w[tv1]" },
@@ -135,7 +136,6 @@ hl.config({
 hl.config({
   dwindle = {
     preserve_split = true, -- You probably want this
-    special_scale_factor = 0.85,
   },
 })
 
