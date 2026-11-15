@@ -14,7 +14,7 @@ Item {
         anchors.fill: parent
         anchors.topMargin: 3
         anchors.bottomMargin: 3
-        color: Appearance.colLayer1
+        color: Appearance.colSurfaceContainerLow
         radius: Appearance.smallRounding
     }
 

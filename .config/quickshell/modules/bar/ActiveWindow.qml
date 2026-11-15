@@ -27,7 +27,7 @@ Item {
         StyledText {
             Layout.fillWidth: true
             text: root.displayedWindow?.class ?? root.displayedWindow?.appId ?? "Desktop"
-            color: Appearance.colSubtext
+            color: Appearance.colOutline
             font.pixelSize: 11
             elide: Text.ElideRight
         }

@@ -25,7 +25,7 @@ Item {
         StyledText {
             visible: SystemTray.items.values.length > 0
             text: "•"
-            color: Appearance.colSubtext
+            color: Appearance.colOutline
             font.pixelSize: 16
         }
     }

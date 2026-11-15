@@ -1,9 +1,9 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import Quickshell
 import Quickshell.Services.SystemTray
 import Quickshell.Widgets
+import qs.modules.common.widgets
 
 MouseArea {
     id: root
@@ -14,13 +14,17 @@ MouseArea {
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
     cursorShape: Qt.PointingHandCursor
 
-    onPressed: event => {
+    onClicked: event => {
         if (event.button === Qt.LeftButton)
             item.activate();
         else if (event.button === Qt.MiddleButton)
             item.secondaryActivate();
-        else if (event.button === Qt.RightButton && item.hasMenu)
-            menu.open();
+        else if (event.button === Qt.RightButton && item.hasMenu) {
+            if (menu.visible)
+                menu.close();
+            else
+                menu.open();
+        }
         event.accepted = true;
     }
 
@@ -32,14 +36,9 @@ MouseArea {
         mipmap: true
     }
 
-    QsMenuAnchor {
+    StyledMenu {
         id: menu
+        target: root
         menu: root.item.menu
-        anchor {
-            item: root
-            gravity: Edges.Bottom
-            edges: Edges.Bottom
-            adjustment: PopupAdjustment.ResizeY | PopupAdjustment.SlideX
-        }
     }
 }

@@ -11,6 +11,7 @@ Singleton {
     readonly property PwNode source: Pipewire.defaultAudioSource
     readonly property bool muted: sink?.audio?.muted ?? false
     readonly property bool micMuted: source?.audio?.muted ?? false
+    readonly property real volume: sink?.audio?.volume ?? 0
 
     function changeVolume(delta) {
         if (sink?.audio)

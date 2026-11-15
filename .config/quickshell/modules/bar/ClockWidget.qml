@@ -23,19 +23,19 @@ Item {
 
         StyledText {
             text: Qt.locale().toString(clock.date, "hh:mm")
-            color: Appearance.colOnLayer1
+            color: Appearance.colOnSurfaceVariant
             font.pixelSize: 16
         }
         StyledText {
             visible: root.showDate
             text: "•"
-            color: Appearance.colOnLayer1
+            color: Appearance.colOnSurfaceVariant
             font.pixelSize: 13
         }
         StyledText {
             visible: root.showDate
             text: Qt.locale().toString(clock.date, "ddd, MM/dd")
-            color: Appearance.colOnLayer1
+            color: Appearance.colOnSurfaceVariant
             font.pixelSize: 13
         }
     }

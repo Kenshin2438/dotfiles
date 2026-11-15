@@ -10,18 +10,18 @@ Singleton {
 
     property var palette: ({})
 
-    readonly property color colLayer0: palette.surface ?? "#141313"
-    readonly property color colLayer1: palette.surface_container_low ?? "#1c1b1c"
-    readonly property color colOnLayer0: palette.on_background ?? "#e6e1e1"
-    readonly property color colOnLayer1: palette.on_surface_variant ?? "#cbc5ca"
-    readonly property color colSubtext: palette.outline ?? "#948f94"
+    readonly property color colSurface: palette.surface ?? "#141313"
+    readonly property color colSurfaceContainerLow: palette.surface_container_low ?? "#1c1b1c"
+    readonly property color colOnSurface: palette.on_surface ?? "#e6e1e1"
+    readonly property color colOnSurfaceVariant: palette.on_surface_variant ?? "#cbc5ca"
+    readonly property color colOutline: palette.outline ?? "#948f94"
     readonly property color colPrimary: palette.primary ?? "#cbc4cb"
     readonly property color colOnPrimary: palette.on_primary ?? "#322f34"
     readonly property color colSecondaryContainer: palette.secondary_container ?? "#4d4b4d"
     readonly property color colOnSecondaryContainer: palette.on_secondary_container ?? "#ece6e9"
     readonly property color colError: palette.error ?? "#ffb4ab"
-    readonly property color colLayer1Hover: mix(colLayer1, colOnLayer1, 0.9)
-    readonly property color colOnLayer1Inactive: mix(colLayer1, colOnLayer1, 0.45)
+    readonly property color colSurfaceContainerLowHover: mix(colSurfaceContainerLow, colOnSurfaceVariant, 0.9)
+    readonly property color colOnSurfaceVariantInactive: mix(colSurfaceContainerLow, colOnSurfaceVariant, 0.45)
 
     readonly property int barHeight: 36
     readonly property int smallRounding: 10

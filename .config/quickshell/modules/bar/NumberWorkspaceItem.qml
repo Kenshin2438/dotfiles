@@ -6,7 +6,7 @@ WorkspaceItem {
     id: root
 
     readonly property bool showingNumbers: !hasIcon
-    readonly property color contentColor: workspaceRoot.occupied[index] && workspaceId !== workspaceRoot.fakeWorkspace ? Appearance.colOnSecondaryContainer : Appearance.colOnLayer1Inactive
+    readonly property color contentColor: workspaceRoot.occupied[index] && workspaceId !== workspaceRoot.fakeWorkspace ? Appearance.colOnSecondaryContainer : Appearance.colOnSurfaceVariantInactive
 
     FadeLoader {
         anchors.centerIn: parent

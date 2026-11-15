@@ -3,14 +3,21 @@ import QtQuick.Layouts
 import qs.modules.common
 import qs.modules.common.widgets
 
-Item {
+MouseArea {
     id: root
 
     required property string iconName
     required property real percentage
     property int warningThreshold: 100
+    property string tooltipText: ""
     implicitWidth: layout.implicitWidth
     implicitHeight: Appearance.barHeight
+    hoverEnabled: true
+
+    Tooltip {
+        target: root
+        text: root.tooltipText
+    }
 
     RowLayout {
         id: layout
@@ -31,7 +38,7 @@ Item {
 
         StyledText {
             text: Math.round(root.percentage * 100)
-            color: Appearance.colOnLayer1
+            color: Appearance.colOnSurfaceVariant
             font.pixelSize: 12
         }
     }

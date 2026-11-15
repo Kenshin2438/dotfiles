@@ -7,16 +7,18 @@ import qs.services
 MouseArea {
     id: root
 
+    readonly property string volumeIcon: Audio.muted ? "volume_off" : Audio.volume === 0 ? "volume_mute" : Audio.volume < 0.33 ? "volume_down" : "volume_up"
+
     implicitWidth: layout.implicitWidth + 16
     implicitHeight: 30
     hoverEnabled: true
     acceptedButtons: Qt.NoButton
-    onWheel: Audio.changeVolume(event.angleDelta.y > 0 ? 0.02 : -0.02)
+    onWheel: event => Audio.changeVolume(event.angleDelta.y > 0 ? 0.02 : -0.02)
 
     Rectangle {
         anchors.fill: parent
         radius: height / 2
-        color: root.containsMouse ? Appearance.colLayer1Hover : "transparent"
+        color: root.containsMouse ? Appearance.colSurfaceContainerLowHover : "transparent"
         Behavior on color {
             ColorAnimation {
                 duration: Appearance.animationDuration
@@ -30,34 +32,31 @@ MouseArea {
         spacing: 11
 
         MaterialSymbol {
-            visible: Audio.muted
-            text: "volume_off"
+            text: root.volumeIcon
             iconSize: 18
-            color: Appearance.colOnLayer0
+            color: Appearance.colOnSurface
+        }
+        StyledText {
+            text: `${Math.round(Audio.volume * 100)}%`
+            color: Appearance.colOnSurface
+            font.pixelSize: 11
         }
         MaterialSymbol {
             visible: Audio.micMuted
             text: "mic_off"
             iconSize: 18
-            color: Appearance.colOnLayer0
-        }
-        StyledText {
-            visible: HyprlandXkb.layoutCodes.length > 1
-            text: HyprlandXkb.currentLayoutCode.split(":").map(layout => layout.split("-")[0].slice(0, 4)).join("\n")
-            horizontalAlignment: Text.AlignHCenter
-            color: Appearance.colOnLayer0
-            font.pixelSize: 11
+            color: Appearance.colOnSurface
         }
         MaterialSymbol {
             text: Network.materialSymbol
             iconSize: 18
-            color: Appearance.colOnLayer0
+            color: Appearance.colOnSurface
         }
         MaterialSymbol {
             visible: BluetoothStatus.available
             text: BluetoothStatus.connected ? "bluetooth_connected" : BluetoothStatus.enabled ? "bluetooth" : "bluetooth_disabled"
             iconSize: 18
-            color: Appearance.colOnLayer0
+            color: Appearance.colOnSurface
         }
     }
 }
