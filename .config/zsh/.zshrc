@@ -12,6 +12,21 @@ autoload -U compinit; compinit -d "$ZSH_CACHE_DIR/zcompdump"
 source "$ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
+# Key bindings
+bindkey -e # emacs key bindings
+bindkey '^[[1;5D' backward-word # ctrl + left
+bindkey '^[[5D' backward-word # ctrl + left
+bindkey '^[[1;5C' forward-word # ctrl + right
+bindkey '^[[5C' forward-word # ctrl + right
+bindkey '^H' backward-kill-word # ctrl + backspace
+bindkey '^[[3;5~' kill-word # ctrl + delete
+bindkey '^[[H' beginning-of-line # home
+bindkey '^[[F' end-of-line # end
+bindkey '^[[A' history-beginning-search-backward # up
+bindkey '^[OA' history-beginning-search-backward # up
+bindkey '^[[B' history-beginning-search-forward # down
+bindkey '^[OB' history-beginning-search-forward # down
+
 # starship
 eval "$(starship init zsh)"
 
