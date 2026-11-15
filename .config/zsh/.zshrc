@@ -3,9 +3,10 @@ HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history"
 HISTSIZE=100000
 SAVEHIST=100000
 
-# Initialize completion (dump file in XDG cache, not $ZDOTDIR)
+# Initialize completion (dump and cache files in XDG cache, not $ZDOTDIR)
 ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 [[ -d "$ZSH_CACHE_DIR" ]] || mkdir -p "$ZSH_CACHE_DIR"
+zstyle ':completion:*' cache-path "$ZSH_CACHE_DIR/.zcompcache"
 autoload -U compinit; compinit -d "$ZSH_CACHE_DIR/zcompdump"
 
 # Plugins (managed as git submodules)
