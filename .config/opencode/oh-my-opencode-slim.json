@@ -1,0 +1,33 @@
+{
+  "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
+  "preset": "openai",
+  "presets": {
+    "openai": {
+      "orchestrator": {
+        "model": "hust/gpt-6.1-sol",
+        "variant": "medium",
+        "skills": ["*"]
+      },
+      "oracle": {
+        "model": "hust/gpt-6.1-sol",
+        "variant": "high",
+        "skills": ["simplify", "requesting-code-review"]
+      },
+      "explorer": {
+        "model": "hust/gpt-6-luna",
+        "variant": "low",
+        "skills": []
+      },
+      "designer": {
+        "model": "hust/gpt-6-luna",
+        "variant": "medium",
+        "skills": []
+      },
+      "fixer": {
+        "model": "hust/gpt-6.1-sol",
+        "variant": "low",
+        "skills": []
+      }
+    }
+  }
+}

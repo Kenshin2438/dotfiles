@@ -1,0 +1,30 @@
+{
+  "plugins": ["oh-my-opencode-slim"],
+  "lsp": true,
+  "providers": {
+    "hust": {
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://skydrow.site/v1"
+      },
+      "models": {
+        "gpt-6.1-sol": {
+          "modelID": "gpt-6.1-sol",
+          "name": "GPT 6.1 Sol",
+          "limit": {
+            "context": 1050000,
+            "output": 128000
+          }
+        },
+        "gpt-6-luna": {
+          "modelID": "gpt-6-luna",
+          "name": "GPT 6 luna",
+          "limit": {
+            "context": 1050000,
+            "output": 128000
+          }
+        }
+      }
+    }
+  }
+}

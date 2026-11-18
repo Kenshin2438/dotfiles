@@ -19,6 +19,7 @@ macos: \
   (link dotfiles/".zshenv"                        home/".zshenv") \
   (link dotfiles/".config/nushell"                config/"nushell") \
   (link dotfiles/".config/nvim"                   config/"nvim") \
+  (link dotfiles/".config/opencode"               config/"opencode") \
   (link dotfiles/".config/kitty"                  config/"kitty") \
   (link dotfiles/".config/VSCodium"               home/"Library/Application Support/VSCodium") \
   (link dotfiles/".config/zed"                    config/"zed") \
@@ -38,6 +39,7 @@ archlinux: \
   (link dotfiles/".config/matugen"                config/"matugen") \
   (link dotfiles/".config/nushell"                config/"nushell") \
   (link dotfiles/".config/nvim"                   config/"nvim") \
+  (link dotfiles/".config/opencode"               config/"opencode") \
   (link dotfiles/".config/quickshell"             config/"quickshell") \
   (link dotfiles/".config/spicetify"              config/"spicetify") \
   (link dotfiles/".config/uwsm"                   config/"uwsm") \

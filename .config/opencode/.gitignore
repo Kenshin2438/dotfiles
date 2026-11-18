@@ -1,0 +1,5 @@
+*
+!.gitignore
+!cli.json
+!oh-my-opencode-slim.json
+!opencode.json
