@@ -59,6 +59,7 @@ wsl:
 windows: \
   (link dotfiles/".config/mihomo"                 config/"mihomo") \
   (link dotfiles/".config/wezterm"                config/"wezterm") \
+  (link dotfiles/".config/opencode"               config/"opencode") \
   (link dotfiles/".config/starship.toml"          config/"starship.toml") \
   (link dotfiles/".config/nvim"                   env("LOCALAPPDATA")/"nvim") \
   (link dotfiles/".config/nushell"                env("APPDATA")/"nushell") \

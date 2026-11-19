@@ -5,27 +5,29 @@
     "openai": {
       "orchestrator": {
         "model": "hust/gpt-6.1-sol",
-        "variant": "medium",
-        "skills": ["*"]
+        "variant": "high",
+        "skills": ["*"],
+        "mcps": ["*"]
       },
       "oracle": {
         "model": "hust/gpt-6.1-sol",
-        "variant": "high",
+        "variant": "max",
         "skills": ["simplify", "requesting-code-review"]
       },
       "explorer": {
         "model": "hust/gpt-6-luna",
-        "variant": "low",
-        "skills": []
+        "variant": "medium",
+        "skills": [],
+        "mcps": [ "context7", "gh_grep" ]
       },
       "designer": {
         "model": "hust/gpt-6-luna",
-        "variant": "medium",
+        "variant": "high",
         "skills": []
       },
       "fixer": {
         "model": "hust/gpt-6.1-sol",
-        "variant": "low",
+        "variant": "xhigh",
         "skills": []
       }
     }
